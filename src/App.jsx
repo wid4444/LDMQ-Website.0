@@ -13,47 +13,34 @@ import Contact from './components/Contact'
 
 function App() {
 
-  // const [init, setInit] = useState(false);
-
-  //   useEffect(() => {
-  //       if (init) {
-  //           return;
-  //       }
-
-  //       useCallback(async (engine) => {
-  //           await loadFull(engine);
-  //       }).then(() => {
-  //           setInit(true);
-  //       });
-  //   }, []);
 
   const options = {
     particles: {
       number: {
-        value: 80,
+        value: 100,
         density: {
           enable: true,
-          area: 800
+          area: 900
         }
       },
       color: {
-        value: ["#2EB67D", "#ECB22E", "#E01E5B", "#36C5F0"]
+        value: ["A3C7D6", "9F73AB",  "#10b981"]
       },
       shape: {
-        type: "circle"
+        type: ["circle", "triangle", "polygon"],
       },
       opacity: {
         value: 1
       },
       size: {
-        value: { min: 1, max: 8 }
+        value: { min: 2, max: 4 }
       },
       links: {
         enable: true,
-        distance: 150,
+        distance: 100,
         color: "#808080",
         opacity: 0.4,
-        width: 1
+        width: 2
       },
       move: {
         enable: true,
@@ -101,7 +88,6 @@ function App() {
   return (
       <div className='bg-gray-300 dark:bg-sky-950'>
          <Particles options={options} init={particlesInit} loaded={particlesLoaded}/>
-         {/* {init && <Particles options={options}/>} */}
        <Sidenav />
        <Main />
        <Work />
