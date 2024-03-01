@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { TypeAnimation } from 'react-type-animation';
-import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa/'
+import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn, FaGithub, FaLinkedin } from 'react-icons/fa/'
 // import DannyImg from '../assets/Danny.jpeg'
 import Toggle from './Toggle'
+import TechStack, { React, GitHub, LinkedIn } from './TechStack';
 
 
 
@@ -63,12 +64,21 @@ const Main = () => {
     />
 
                 </h2>
-                <div className='flex justify-between pt-6 max-w-[200px] w-full'>
-                    <FaTwitter className='cursor-pointer text-gray-800 dark:text-gray-400' size={20}/>
+                <div className='flex gap-3 pt-6 max-w-[200px] w-full'>
+                    {/* <FaTwitter className='cursor-pointer text-gray-800 dark:text-gray-400' size={20}/>
                     <FaFacebookF className='cursor-pointer text-gray-800 dark:text-gray-400' size={20}/>
-                    <FaInstagram className='cursor-pointer text-gray-800 dark:text-gray-400' size={20}/>
-                    <FaLinkedinIn className='cursor-pointer text-gray-800 dark:text-gray-400' size={20}/>
-                    <FaGithub className='cursor-pointer text-gray-800 dark:text-gray-400' size={20}/>
+                    <FaInstagram className='cursor-pointer text-gray-800 dark:text-gray-400' size={20}/> */}
+                    {/* <FaLinkedinIn className='cursor-pointer text-gray-800 dark:text-gray-400' size={20}/>
+                    <FaGithub className='cursor-pointer text-gray-800 dark:text-gray-400' size={20}/> */}
+
+
+                    {/* <TechStack 
+                    // React={React}
+                    GitHub={GitHub}
+                    LinkedIn={LinkedIn}
+
+                    /> */}
+                    
                 </div>
             </div>
         </div>

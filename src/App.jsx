@@ -9,6 +9,8 @@ import Main from './components/Main'
 import Work from './components/Work'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import Bio from './components/Bio'
+import Resume from './components/Resume';
 
 
 function App() {
@@ -24,16 +26,20 @@ function App() {
         }
       },
       color: {
-        value: ["A3C7D6", "9F73AB",  "#10b981"]
+        // value: ["7b2cbf", "70e000",  "80ffdb"]
+        value: ["80ffdb"]
+
       },
       shape: {
-        type: ["circle", "triangle", "polygon"],
+        // type: ["circle", "triangle", "polygon"],
+        type: ["star"],
+
       },
       opacity: {
         value: 1
       },
       size: {
-        value: { min: 2, max: 4 }
+        value: { min: 2, max: 3 }
       },
       links: {
         enable: true,
@@ -90,8 +96,10 @@ function App() {
          <Particles options={options} init={particlesInit} loaded={particlesLoaded}/>
        <Sidenav />
        <Main />
+        <Bio />
        <Work />
        <Projects />
+       <Resume />
        <Contact />
       </div>
       
