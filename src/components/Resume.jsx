@@ -1,6 +1,3 @@
-import React from 'react'
-import danny from '../assets/danny.jpg'
-import TechStack, { GitHub, LinkedIn } from './TechStack'
 import { FaArrowRight } from "react-icons/fa";
 
 function Resume() {
@@ -21,13 +18,7 @@ function Resume() {
     <button className='w-52 flex justify-center align-middle font-bold hover:ml-6 hover:transition-transform-border ease-in-out hover:-translate-y-1 hover:scale-125 text-lg text-[#001b5e] py-3 border-solid hover:border-b border-green-500 dark:border-emerald-500 shadow-sky-300  dark:text-green-500 dark:hover:text-gray-200 dark:shadow-gray-50' onClick={openResume}>
       View Full Resume <FaArrowRight size={20} className='pt-1 ml-2 '/>
     </button>
-{/* </div> */}
-    {/* <TechStack 
-                    GitHub={GitHub}
-                    LinkedIn={LinkedIn}
 
-                    /> */}
-{/* </div> */}
     </div>
   )
 }

@@ -1,16 +1,16 @@
 import { useState, useEffect, useCallback } from 'react'
 import Particles from "react-particles";
 // import Particles, {initParticlesEngine} from "@tsparticles/react";
-import { loadFull } from "tsparticles";
+// import { loadFull } from "tsparticles";
 import { loadSlim } from "tsparticles-slim";
 
-import Sidenav from './components/Sidenav'
+// import Sidenav from './components/Sidenav'
 import Main from './components/Main'
 import Work from './components/Work'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Bio from './components/Bio'
-import Resume from './components/Resume';
+// import Resume from './components/Resume';
 import Header from './components/Header';
 
 
@@ -63,23 +63,23 @@ function App() {
     interactivity: {
       events: {
         onHover: {
-          enable: true,
+          enable: true, // this will enable the particles to connect to the mouse
           mode: "grab"
         },
         onClick: {
-          enable: true,
+          enable: true, // this will create more particles when clicked
           mode: "push"
         }
       },
       modes: {
         grab: {
-          distance: 140,
+          distance: 240, // distance that particles will connect to the pointer
           links: {
-            opacity: 1
+            opacity: .5 // with of the lines connecting the particles
           }
         },
         push: {
-          quantity: 4
+          quantity: 4  // amount of new particles per click
         }
       }
     }

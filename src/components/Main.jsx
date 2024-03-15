@@ -1,9 +1,9 @@
 import  { useEffect, useState } from 'react'
 import { TypeAnimation } from 'react-type-animation';
-import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn, FaGithub, FaLinkedin } from 'react-icons/fa/'
+// import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn, FaGithub, FaLinkedin } from 'react-icons/fa/'
 // import DannyImg from '../assets/Danny.jpeg'
 import Toggle from './Toggle'
-import TechStack, { React, GitHub, LinkedIn } from './TechStack';
+import TechStack, { GitHub, LinkedIn } from './TechStack';
 import brush from '../assets/brush2.png'
 
 
@@ -42,9 +42,9 @@ const Main = () => {
           // darkMode={darkMode} 
           handleChange={handleChange}
           />
-            <div className='max-w-[700px] 2xl:pb-96 xsm:pb-0 m-auto h-full w-full flex flex-col justify-center lg:items-start items-center'>
+            <div className='max-w-[700px] 2xl:pb-96 xsm:pb-0 m-auto h-full w-full flex flex-col justify-center lg:items-middle'>
                 <h1 className='sm:text-6xl text-4xl font-bold text-gray-800 dark:text-gray-200' >I'm Danny Martinez</h1>
-                <h2 className='flex sm:text-3xl text-2xl pt-4 text-gray-800 dark:text-gray-200'>
+                <h2 className='flex  sm:text-3xl text-2xl pt-4 text-gray-800 dark:text-gray-200'>
                     I'm 
                 <TypeAnimation
       sequence={[
@@ -65,7 +65,7 @@ const Main = () => {
     />
 
                 </h2>
-                <div className='flex gap-3 pt-6 max-w-[200px] w-full xsm:flex xsm:justify-center'>
+                <div className='flex lg:justify-start gap-3 pt-6 max-w-[700px] w-full xsm:flex xsm:justify-center'>
                     {/* <FaTwitter className='cursor-pointer text-gray-800 dark:text-gray-400' size={20}/>
                     <FaFacebookF className='cursor-pointer text-gray-800 dark:text-gray-400' size={20}/>
                     <FaInstagram className='cursor-pointer text-gray-800 dark:text-gray-400' size={20}/> */}

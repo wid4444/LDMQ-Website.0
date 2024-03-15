@@ -1,4 +1,3 @@
-import React from 'react'
 import WorkItem from './WorkItem'
 import Resume from './Resume';
 
@@ -99,7 +98,7 @@ const data = [
 
 const Work = () => {
   return (
-    <div id='experience' className='max-w-[1040px] m-auto p-4 py-16 z-100  bg-opacity-100'>
+    <div id='experience' className='max-w-[1040px] md:pl-20 m-auto p-4 py-16 z-100  bg-opacity-100'>
         <h1 className='text-4xl font-bold text-center text-[#001b5e] dark:text-gray-300 p-10 pb-20' >Experience</h1>
         { data.map((item, id) => (
             <WorkItem 

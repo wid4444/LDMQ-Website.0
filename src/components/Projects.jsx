@@ -4,23 +4,20 @@ import TechStack, { Sass, Vue, React, Html, Css, JavaScript, SquareSpace, Figma,
 // import { Vue } from "./TechStack";
 
 // import DannyImg from '../assets/Danny.jpeg'
-import mediaImg from "../assets/media.jpeg";
-import rokuImg from "../assets/roku.jpeg";
-import varImg from "../assets/var.jpeg";
-import var2Img from "../assets/var2.jpeg";
+
 import educationPaper from "../assets/innovation_edu_aera_paper_final.pdf";
 import avi from "../assets/avi.png";
 import monica from "../assets/monica.png";
 import education from "../assets/inno-education.png";
 import underserved from "../assets/inno-underserved.png";
 import westend from "../assets/we-sire.png";
-import waSire from "../assets/wa-sire.png";
+// import waSire from "../assets/wa-sire.png";
 
 // import { FaVuejs, FaSass, FaSquarespace } from "react-icons/fa";
 
 const Projects = () => {
   return (
-    <div id="projects" className="max-w-[1040px] m-auto p-4 py-16  rounded-3xl">
+    <div id="projects" className="max-w-[1040px] md:pl-20 m-auto p-4 py-16  rounded-3xl">
       <h1 className="text-4xl font-bold text-center text-[#001b5e] dark:text-gray-300">
         Projects
       </h1>

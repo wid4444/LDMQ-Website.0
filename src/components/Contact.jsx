@@ -1,8 +1,7 @@
-import React from 'react'
 
 const Contact = () => {
   return (
-    <div id='contact' className='max-w-[800px] m-auto px-20 py-20 pb-20 xsm:px-5 flex-col justify-center'>
+    <div id='contact' className='max-w-[800px] md:pl-20 m-auto px-20 py-20 pb-20 xsm:px-5 flex-col justify-center'>
         <h1 className='py-4 text-4xl font-bold text-center  text-[#001b5e] dark:text-gray-300'>Contact</h1>
         <form action="https://getform.io/f/78dddc00-f83b-4531-b5cf-f8ea63ef1a54" method='POST' encType='multipart/form-data' className='flex flex-col justify-center'>
             {/* <div className='grid md:grid-cols-2 gap-4 w-full py-2'> */}

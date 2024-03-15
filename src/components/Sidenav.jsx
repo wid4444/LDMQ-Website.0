@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
-  AiOutlineMenu,
-  AiOutlineHome,
-  AiOutlineProject,
-  AiOutlineMail,
+  // AiOutlineMenu,
+  // AiOutlineHome,
+  // AiOutlineProject,
+  // AiOutlineMail,
   AiFillHome,
 } from "react-icons/ai";
-import { TiThMenu } from "react-icons/ti";
-import { BsPerson } from "react-icons/bs";
-import { GrProjects } from "react-icons/gr";
+// import { TiThMenu } from "react-icons/ti";
+// import { BsPerson } from "react-icons/bs";
+// import { GrProjects } from "react-icons/gr";
 import { BiSolidBriefcaseAlt2 } from "react-icons/bi";
-import { FaUserTie, FaFileAlt } from "react-icons/fa";
+import { FaUserTie } from "react-icons/fa";
 import { IoAppsSharp, IoMenu } from "react-icons/io5";
 import { IoMdMail, IoIosCloseCircle } from "react-icons/io";
-import { CgMenuHotdog } from "react-icons/cg";
+// import { CgMenuHotdog } from "react-icons/cg";
 
 import "./Styles.css";
 
@@ -34,56 +34,56 @@ const Sidenav = () => {
     setActiveLink(null);
   };
 
-  const [currentSection, setCurrentSection] = useState("");
+  // const [currentSection, setCurrentSection] = useState("");
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const home = document.getElementById("home");
-      const bio = document.getElementById("bio");
-      const experience = document.getElementById("experience");
-      const projects = document.getElementById("projects");
-      const resume = document.getElementById("resume");
-      const contact = document.getElementById("contact");
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const home = document.getElementById("home");
+  //     const bio = document.getElementById("bio");
+  //     const experience = document.getElementById("experience");
+  //     const projects = document.getElementById("projects");
+  //     const resume = document.getElementById("resume");
+  //     const contact = document.getElementById("contact");
 
-      if (
-        window.scrollY >= home.offsetTop &&
-        window.scrollY < home.offsetTop + home.offsetHeight
-      ) {
-        setCurrentSection("home");
-      } else if (
-        window.scrollY >= bio.offsetTop &&
-        window.scrollY < bio.offsetTop + bio.offsetHeight
-      ) {
-        setCurrentSection("bio");
-      } else if (
-        window.scrollY >= experience.offsetTop &&
-        window.scrollY < experience.offsetTop + experience.offsetHeight
-      ) {
-        setCurrentSection("experience");
-      } else if (
-        window.scrollY >= projects.offsetTop &&
-        window.scrollY < projects.offsetTop + projects.offsetHeight
-      ) {
-        setCurrentSection("projects");
-      } else if (
-        window.scrollY >= resume.offsetTop &&
-        window.scrollY < resume.offsetTop + resume.offsetHeight
-      ) {
-        setCurrentSection("resume");
-      } else if (
-        window.scrollY >= contact.offsetTop &&
-        window.scrollY < contact.offsetTop + contact.offsetHeight
-      ) {
-        setCurrentSection("contact");
-      }
-    };
+  //     if (
+  //       window.scrollY >= home.offsetTop &&
+  //       window.scrollY < home.offsetTop + home.offsetHeight
+  //     ) {
+  //       setCurrentSection("home");
+  //     } else if (
+  //       window.scrollY >= bio.offsetTop &&
+  //       window.scrollY < bio.offsetTop + bio.offsetHeight
+  //     ) {
+  //       setCurrentSection("bio");
+  //     } else if (
+  //       window.scrollY >= experience.offsetTop &&
+  //       window.scrollY < experience.offsetTop + experience.offsetHeight
+  //     ) {
+  //       setCurrentSection("experience");
+  //     } else if (
+  //       window.scrollY >= projects.offsetTop &&
+  //       window.scrollY < projects.offsetTop + projects.offsetHeight
+  //     ) {
+  //       setCurrentSection("projects");
+  //     } else if (
+  //       window.scrollY >= resume.offsetTop &&
+  //       window.scrollY < resume.offsetTop + resume.offsetHeight
+  //     ) {
+  //       setCurrentSection("resume");
+  //     } else if (
+  //       window.scrollY >= contact.offsetTop &&
+  //       window.scrollY < contact.offsetTop + contact.offsetHeight
+  //     ) {
+  //       setCurrentSection("contact");
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <div>
@@ -154,7 +154,7 @@ const Sidenav = () => {
       ) : (
         ""
       )}
-      <div className="md:block hidden fixed top-[25%] z-10 ml-4">
+      <div className="md:block hidden fixed top-[25%] z-10 ml-4 md:ml-0">
         <div className="flex flex-col">
           <a
             href="#main"
@@ -163,8 +163,8 @@ const Sidenav = () => {
             onMouseLeave={handleMouseLeave}
             className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:shadow-inner text-blue-800 hover:shadow-gray-800  dark:hover:shadow-inner dark:text-green-600 dark:hover:shadow-gray-200 ease-in duration-300"
           >
-            <AiFillHome size={25} />
-            {/* {activeLink === 'Home' ? 'Home' : <AiFillHome size={25} color= {currentSection === 'main' ? 'red' : 'text-blue-800' } />} */}
+            {/* <AiFillHome size={25} /> */}
+            {activeLink === <AiFillHome size={25} /> ? 'Home' : <AiFillHome size={25} />}
           </a>
           <a
             href="#bio"

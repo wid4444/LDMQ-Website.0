@@ -1,4 +1,3 @@
-import React from 'react'
 
 const ProjectItem = ({img, title, link, github, skills, libraries, paper, wireframe }) => {
   return (
