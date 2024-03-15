@@ -1,16 +1,11 @@
 import { useState, useEffect, useCallback } from 'react'
 import Particles from "react-particles";
-// import Particles, {initParticlesEngine} from "@tsparticles/react";
-// import { loadFull } from "tsparticles";
 import { loadSlim } from "tsparticles-slim";
-
-// import Sidenav from './components/Sidenav'
 import Main from './components/Main'
 import Work from './components/Work'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Bio from './components/Bio'
-// import Resume from './components/Resume';
 import Header from './components/Header';
 
 
