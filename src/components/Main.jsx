@@ -12,7 +12,7 @@ const Main = () => {
 
   const [darkMode, setDarkMode] = useState(() => {
     const savedMode = localStorage.getItem('darkMode');
-    return savedMode === 'true' ? true : false;
+    return savedMode === 'false' ? true : false;
   });
 
   useEffect(() => {
