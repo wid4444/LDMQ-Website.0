@@ -20,3 +20,10 @@ transition: left 0.4s ease-in-out, transform 0.4s ease-in-out;
 .links:hover {
     box-shadow: inset 0px 5px 10px 0px #16151c, 0px 0px 15px -2px lightgray;
 }
+
+.is-current {
+    background-color: #f00; /* Replace with your highlight color */
+  }
+  .active {
+    color: red; /* Replace with your highlight color */
+  }

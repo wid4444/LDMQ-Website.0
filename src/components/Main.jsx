@@ -4,6 +4,7 @@ import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn, FaGithub, FaLinkedin
 // import DannyImg from '../assets/Danny.jpeg'
 import Toggle from './Toggle'
 import TechStack, { React, GitHub, LinkedIn } from './TechStack';
+import brush from '../assets/brush2.png'
 
 
 
@@ -30,9 +31,9 @@ const Main = () => {
 
 
   return (
-    <div id='main' className=' bg-white dark:bg-black'>
-        <img className='w-full h-screen object-cover //object-left// scale-x-[1]' src="images/lens.jpeg" alt="" />
-        <div className='w-full h-screen absolute top-0 left-0 bg-white/50 dark:bg-black/50' >
+    <div id='main' className='2xl:h-screen xl:h-screen md:h-screen sm:h-screen xsm:h-screen flex justify-center bg-gray-300 dark:bg-sky-950'>
+        <img className='absolute pb-40 xsm:pb-0  object-cover scale-x-[1]  ' src={brush} alt="" />
+        <div className='w-full h-screen absolute top-0 left-0 sm:pb-0 xsm:pb-0' >
           
         {/* <button onClick={handleChange} className='fixed left-5 top-5 bg-black text-white px-5 py-3 rounded hover:bg-stone-700 '>{darkMode ? 'Light' : "Dark"} Mode </button> */}
 
@@ -41,9 +42,9 @@ const Main = () => {
           // darkMode={darkMode} 
           handleChange={handleChange}
           />
-            <div className='max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center'>
-                <h1 className='sm:text-5xl text-4xl font-bold text-gray-800 dark:text-gray-400' >I'm Danny Martinez</h1>
-                <h2 className='flex sm:text-3xl text-2xl pt-4 text-gray-800 dark:text-gray-400'>
+            <div className='max-w-[700px] 2xl:pb-96 xsm:pb-0 m-auto h-full w-full flex flex-col justify-center lg:items-start items-center'>
+                <h1 className='sm:text-6xl text-4xl font-bold text-gray-800 dark:text-gray-200' >I'm Danny Martinez</h1>
+                <h2 className='flex sm:text-3xl text-2xl pt-4 text-gray-800 dark:text-gray-200'>
                     I'm 
                 <TypeAnimation
       sequence={[
@@ -54,7 +55,7 @@ const Main = () => {
         2000,
         'a Diversity and Inclusion Advocate',
         2000,
-        ' an Artist',
+        'an Artist',
         2000
       ]}
       wrapper="span"
@@ -64,7 +65,7 @@ const Main = () => {
     />
 
                 </h2>
-                <div className='flex gap-3 pt-6 max-w-[200px] w-full'>
+                <div className='flex gap-3 pt-6 max-w-[200px] w-full xsm:flex xsm:justify-center'>
                     {/* <FaTwitter className='cursor-pointer text-gray-800 dark:text-gray-400' size={20}/>
                     <FaFacebookF className='cursor-pointer text-gray-800 dark:text-gray-400' size={20}/>
                     <FaInstagram className='cursor-pointer text-gray-800 dark:text-gray-400' size={20}/> */}
@@ -72,12 +73,12 @@ const Main = () => {
                     <FaGithub className='cursor-pointer text-gray-800 dark:text-gray-400' size={20}/> */}
 
 
-                    {/* <TechStack 
-                    // React={React}
-                    GitHub={GitHub}
+                    <TechStack 
                     LinkedIn={LinkedIn}
+                    GitHub={GitHub}
+                    
 
-                    /> */}
+                    />
                     
                 </div>
             </div>

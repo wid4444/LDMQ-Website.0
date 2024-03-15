@@ -11,6 +11,7 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Bio from './components/Bio'
 import Resume from './components/Resume';
+import Header from './components/Header';
 
 
 function App() {
@@ -26,13 +27,15 @@ function App() {
         }
       },
       color: {
-        // value: ["7b2cbf", "70e000",  "80ffdb"]
-        value: ["80ffdb"]
+        value: ["7b2cbf", "70e000",  "80ffdb"]
+        // value: ["80ffdb"]
 
       },
       shape: {
         // type: ["circle", "triangle", "polygon"],
-        type: ["star"],
+        // type: ["star"],
+        type: ["circle"],
+
 
       },
       opacity: {
@@ -91,17 +94,47 @@ function App() {
 }, []);
 
 
+const [currentSection, setCurrentSection] = useState('');
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setCurrentSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.7 } // Adjust this value based on your needs
+    );
+
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => observer.observe(section));
+
+    return () => {
+      sections.forEach(section => observer.unobserve(section));
+    };
+  }, []);
+
+
   return (
+    <>
+    <Header />
+         {/* <Particles options={options} init={particlesInit} loaded={particlesLoaded}/> */}
+         <div id="particles-container">
+  <Particles options={options} init={particlesInit} loaded={particlesLoaded}/>
+</div>
+
       <div className='bg-gray-300 dark:bg-sky-950'>
-         <Particles options={options} init={particlesInit} loaded={particlesLoaded}/>
-       <Sidenav />
-       <Main />
-        <Bio />
-       <Work />
-       <Projects />
-       <Resume />
-       <Contact />
+         {/* <Sidenav currentSection={currentSection} /> */}
+      <Main id="main" />
+      <Bio id="bio" />
+      <Work id="work" />
+      <Projects id="projects" />
+      {/* <Resume id="resume" /> */}
+      <Contact id="contact" />
       </div>
+      </>
       
   )
 }

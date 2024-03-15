@@ -233,6 +233,35 @@ function Canva() {
 }
 export { Canva };
 
+function LinkedIn() {
+  return (
+    <span
+    className="hover:transition-transform hover:-translate-y-1 hover:scale-110"
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        boxShadow: "inset 0px 0px 20px #ced4da",
+        borderRadius: "50%",
+        border: "3px solid #0077b5",
+        padding: "10px",
+        
+      }}
+      // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
+    >
+      {/* <FaLinkedin fontSize={30} color="lightblue" />
+      <link rel="https://www.linkedin.com/in/leobardo-martinez/" href="linkedin" /> */}
+
+      <a href="https://www.linkedin.com/in/leobardo-martinez/" target="_blank" rel="noopener noreferrer">
+  <FaLinkedin className="text-[#0077b5] dark:text-gray-200" size={40}/>
+      </a>
+
+
+    </span>
+  );
+}
+export { LinkedIn };
+
 function GitHub() {
   return (
     <span
@@ -260,34 +289,7 @@ function GitHub() {
 }
 export { GitHub };
 
-function LinkedIn() {
-  return (
-    <span
-    className="hover:transition-transform hover:-translate-y-1 hover:scale-110"
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        boxShadow: "inset 0px 0px 15px #ced4da",
-        borderRadius: "50%",
-        border: "3px solid #0077b5",
-        padding: "10px",
-        
-      }}
-      // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
-    >
-      {/* <FaLinkedin fontSize={30} color="lightblue" />
-      <link rel="https://www.linkedin.com/in/leobardo-martinez/" href="linkedin" /> */}
 
-      <a href="https://www.linkedin.com/in/leobardo-martinez/" target="_blank" rel="noopener noreferrer">
-  <FaLinkedin className="text-[#0077b5] dark:text-gray-200" size={40}/>
-      </a>
-
-
-    </span>
-  );
-}
-export { LinkedIn };
 
 function TechStack({
   Vue,
@@ -301,8 +303,9 @@ function TechStack({
   Illustrator,
   Xd,
   Canva,
-  GitHub,
   LinkedIn,
+  GitHub,
+  
 }) {
   return (
     <>

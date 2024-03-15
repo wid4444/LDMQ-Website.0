@@ -3,17 +3,17 @@ import danny from '../assets/danny.jpg'
 
 function Bio() {
   return (
-    <div id='bio' className='max-w-[1040px] m-auto md:pl-20 p-4 py-16 relative flex-column items-center justify-center h-auto w-full '>
+    <div id='bio' className='max-w-[1040px] m-auto md:pl-20 p-4 pb-30 py-16 relative flex-column items-center justify-center h-auto w-full '>
                   <h1 className='py-4 text-4xl font-bold text-center text-[#001b5e] dark:text-gray-300'>Bio</h1>
         <div className='flex justify-center h-auto w-full p-10'>
         <img src={danny} alt="" className='relative flex items-center justify-center h-auto w-full shadow-2xl shadow-gray-400 hover:transition-transform hover:-translate-y-1 hover:scale-110 motion-reduce:transition-none motion-reduce:hover:transform-none hover:shadow-md hover:shadow-gray-400 rounded-2xl group' style={{borderRadius:'50%', width:"300px", }}/>
         </div>
         <div>
-        <p className='my-2 text-base font-normal text-stone-500 dark:text-emerald-50'>Hi! My name is Leobardo but my family and friends call me Danny . When I was 14 years old I immigrated to the United States in search of the American Dream.</p>
-        <p className='my-2 text-base font-normal text-stone-500 dark:text-emerald-50'>I'm a Jr. Full Stack Java Software Developer based in Middletown, DE. I am bi-lingual and have over 10 years of experience in manufacturing. I am a self-taught artist and woodworker.</p>
-        <p className='my-2 text-base font-normal text-stone-500 dark:text-emerald-50'>I have volunteered at a nonprofit organization to paint murals around the city of Wilmington, DE. and collaborated with other groups on smaller projects.</p>
-        <p className='my-2 text-base font-normal text-stone-500 dark:text-emerald-50'>About three years ago I found a passion for woodworking, and since then I have created a number of projects like cabinets, floating shelves, and even a small bar.</p>
-        <p className='my-2 text-base font-normal text-stone-500 dark:text-emerald-50'>With my attention to detail, creativity, and communication I like to create responsive, and user-friendly application ideas. I am always interested in learning new languages and frameworks, improving my skills, and making contributions to society.</p>
+        <p className='my-2 text-lg font-bold text-stone-500 dark:text-emerald-50'>Hi there! I'm Leobardo, although most folks know me as Danny.</p>
+        <p className='my-2 text-lg font-bold text-stone-500 dark:text-emerald-50'>Back in 2022, I made the exciting decision to dive into the world of coding and web development through Tech Elevator. Since then, I've had the incredible opportunity to craft software solutions for diverse clients, including non-profits, artists, and small corporation.</p>
+        <p className='my-2 text-lg font-bold text-stone-500 dark:text-emerald-50'>These days, my primary focus revolves around creating user-friendly interfaces for our valued customers at Tech Impact. I'm particularly drawn to the intersection of design and engineering, where I strive to build software that not only looks good but also performs seamlessly behind the scenes.</p>
+        <p className='my-2 text-lg font-bold text-stone-500 dark:text-emerald-50'>When I'm not in my computer, you'll often find me in my woodworking workshop, enjoying quality time with my wife and our furry companion Lilly, tackling various projects around the house, or watching anime.</p>
+        {/* <p className='my-2 text-base font-normal text-stone-500 dark:text-emerald-50'>With my attention to detail, creativity, and communication I like to create responsive, and user-friendly application ideas. I am always interested in learning new languages and frameworks, improving my skills, and making contributions to society.</p> */}
         </div>
 
     </div>
