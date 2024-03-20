@@ -1,19 +1,31 @@
-import { useState, useEffect } from "react";
+import { useState,  } from "react";
 import {
   // AiOutlineMenu,
   // AiOutlineHome,
   // AiOutlineProject,
   // AiOutlineMail,
-  AiFillHome,
+  // AiFillHome,
 } from "react-icons/ai";
 // import { TiThMenu } from "react-icons/ti";
 // import { BsPerson } from "react-icons/bs";
 // import { GrProjects } from "react-icons/gr";
 import { BiSolidBriefcaseAlt2 } from "react-icons/bi";
-import { FaUserTie } from "react-icons/fa";
-import { IoAppsSharp, IoMenu } from "react-icons/io5";
+import { FaGithub, FaLinkedin, FaUserTie } from "react-icons/fa";
+import {
+  // IoAppsSharp,
+  IoMenu,
+  // IoHomeOutline,
+  // IoMailOutline,
+  // IoPersonOutline,
+  IoHome,
+  // IoCodeWorking,
+  IoApps
+} from "react-icons/io5";
 import { IoMdMail, IoIosCloseCircle } from "react-icons/io";
+// import TechStack, { GitHub, LinkedIn } from "./TechStack";
 // import { CgMenuHotdog } from "react-icons/cg";
+// import { MdWorkOutline } from "react-icons/md";
+// import { AiOutlineAppstore } from "react-icons/ai";
 
 import "./Styles.css";
 
@@ -111,7 +123,7 @@ const Sidenav = () => {
             href="#main"
             className="paths w-[35%] flex justify-center items-center rounded-full shadow-inner text-gray-100 bg-[#001b5e] dark:bg-green-600 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
-            <AiFillHome size={20} green-600 />
+            <IoHome size={20} green-600 />
             <span className="pl-4">Home</span>
           </a>
           <a
@@ -135,7 +147,7 @@ const Sidenav = () => {
             href="#projects"
             className="paths w-[35%] flex justify-center items-center rounded-full shadow-inner text-gray-100 bg-[#001b5e] dark:bg-green-600 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
-            <IoAppsSharp size={20} />
+            <IoApps size={20} />
             <span className="pl-4">Projects</span>
           </a>
           {/* <a onClick={handleNav} href="#resume" className='paths w-[35%] flex justify-center items-center rounded-full shadow-inner text-gray-100 bg-[#001b5e] dark:bg-green-600 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
@@ -154,39 +166,40 @@ const Sidenav = () => {
       ) : (
         ""
       )}
-      <div className="md:block hidden fixed top-[25%] z-10 ml-4 md:ml-0">
+      <div className="md:block hidden fixed top-[35%] z-10 ml-4 md:ml-0">
         <div className="flex flex-col">
           <a
             href="#main"
             title="Home"
             onMouseEnter={() => handleMouseEnter("Home")}
             onMouseLeave={handleMouseLeave}
-            className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:shadow-inner text-blue-800 hover:shadow-gray-800  dark:hover:shadow-inner dark:text-green-600 dark:hover:shadow-gray-200 ease-in duration-300"
+            className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold  text-blue-800   dark:text-green-600  ease-in duration-300"
           >
             {/* <AiFillHome size={25} /> */}
-            {activeLink === <AiFillHome size={25} /> ? 'Home' : <AiFillHome size={25} />}
+            {activeLink === "Home" ? "Home" : <IoHome size={25} />}
           </a>
+
           <a
             href="#bio"
             title="Bio"
             onMouseEnter={() => handleMouseEnter("Bio")}
             onMouseLeave={handleMouseLeave}
-            className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:shadow-inner text-blue-800 hover:shadow-gray-800  dark:hover:shadow-inner dark:text-green-600 dark:hover:shadow-gray-200 ease-in duration-300"
+            className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-blue-800 dark:text-green-600 ease-in duration-300"
           >
-            <FaUserTie size={25} />
-            {/* {activeLink === 'Bio' ? 'Bio' : <FaUserTie size={25} color={currentSection === 'bio' ? 'red': 'text-blue-800'} />} */}
+            {/* <IoPersonOutline size={25} className="text-lg text-bold"/> */}
+            {activeLink === "Bio" ? "Bio" : <FaUserTie size={25} />}
           </a>
           <a
             href="#experience"
             title="Experience"
             onMouseEnter={() => handleMouseEnter("Experience")}
             onMouseLeave={handleMouseLeave}
-            className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:shadow-inner text-blue-800 hover:shadow-gray-800  dark:hover:shadow-inner dark:text-green-600 dark:hover:shadow-gray-200 ease-in duration-300"
+            className="rounded-full m-2 p-4 cursor-pointer hover:scale-110  text-blue-800 dark:text-green-600 ease-in duration-300"
           >
-            <BiSolidBriefcaseAlt2 size={25} />
-            {/* {activeLink === 'Experience' ? 'Experience' :<BiSolidBriefcaseAlt2 size={25} color={currentSection === 'experience' ? 'red': 'text-blue-800'} />} */}
-            </a>
-            {/* <a
+            {/* <MdWorkOutline size={25} /> */}
+            {activeLink === 'Experience' ? 'Experience' :<BiSolidBriefcaseAlt2 size={25} />}
+          </a>
+          {/* <a
               href="#resume"
               title="Resume"
               onMouseEnter={() => handleMouseEnter("Resume")}
@@ -201,10 +214,10 @@ const Sidenav = () => {
             title="Projects"
             onMouseEnter={() => handleMouseEnter("Projects")}
             onMouseLeave={handleMouseLeave}
-            className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:shadow-inner text-blue-800 hover:shadow-gray-800  dark:hover:shadow-inner dark:text-green-600 dark:hover:shadow-gray-200 ease-in duration-300"
+            className="rounded-full m-2 p-4 cursor-pointer hover:scale-110  text-blue-800 dark:text-green-600  ease-in duration-300"
           >
-            <IoAppsSharp size={25} />
-            {/* {activeLink === 'Projects' ? 'Projects' :<IoAppsSharp size={25} color={currentSection === 'projects' ? 'red': 'text-blue-800'} />} */}
+            {/* <AiOutlineAppstore size={25} /> */}
+            {activeLink === 'Projects' ? 'Projects' :<IoApps size={25}  />}
           </a>
 
           <a
@@ -212,12 +225,29 @@ const Sidenav = () => {
             title="Contact"
             onMouseEnter={() => handleMouseEnter("Contact")}
             onMouseLeave={handleMouseLeave}
-            className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:shadow-inner text-blue-800 hover:shadow-gray-800  dark:hover:shadow-inner dark:text-green-600 dark:hover:shadow-gray-200 ease-in duration-300"
+            className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 text-extrabold text-blue-800 dark:text-green-600  ease-in duration-300"
           >
-            <IoMdMail size={25} />
-            {/* {activeLink === 'Contact' ? 'Contact' :<IoMdMail size={25} color={currentSection === 'contact' ? 'red': 'text-blue-800'} />} */}
+            {/* <IoMailOutline size={25} /> */}
+            {activeLink === 'Contact' ? 'Contact' :<IoMdMail size={25} />}
           </a>
         </div>
+        {/* <div className="flex flex-col"> 
+
+        <a
+            href="#contact"
+            title="Contact"
+            onMouseEnter={() => handleMouseEnter("Contact")}
+            onMouseLeave={handleMouseLeave}
+            className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:shadow-inner text-blue-800 hover:shadow-gray-800  dark:hover:shadow-inner dark:text-green-600 dark:hover:shadow-gray-200 ease-in duration-300"
+          >
+            <FaGithub size={25} />
+          </a>
+          <TechStack 
+          LinkedIn={LinkedIn}
+          GitHub={GitHub}
+          />
+
+            </div> */}
       </div>
       {/* end of Navbar logic */}
     </div>

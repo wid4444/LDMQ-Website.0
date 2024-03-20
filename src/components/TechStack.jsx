@@ -9,11 +9,12 @@ import {
   FaCss3Alt,
   FaFigma,
   FaSquarespace,
-  FaLinkedin,
-  FaGithub
+ 
 } from "react-icons/fa";
 import { SiAdobeillustrator, SiAdobexd, SiCanva } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
+import { RiGithubLine } from "react-icons/ri";
+import { FiLinkedin } from "react-icons/fi";
 
 function Vue() {
   return (
@@ -25,7 +26,7 @@ function Vue() {
         // paddingTop: '5px',
         boxShadow: "inset 0px 0px 15px white",
         borderRadius: "50%",
-        border: "2px solid #41B883",
+        border: "4px solid #41B883",
         padding: "8px",
         // marginRight: "5px",
       }}
@@ -45,7 +46,7 @@ function Sass() {
         alignItems: "center",
         boxShadow: "inset 0px 0px 15px white",
         borderRadius: "50%",
-        border: "2px solid #cc6699",
+        border: "4px solid #cc6699",
         padding: "8px",
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
@@ -64,7 +65,7 @@ function React() {
         alignItems: "center",
         boxShadow: "inset 0px 0px 15px white",
         borderRadius: "50%",
-        border: "2px solid #61dbfb",
+        border: "4px solid #61dbfb",
         padding: "8px",
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
@@ -83,7 +84,7 @@ function Html() {
         alignItems: "center",
         boxShadow: "inset 0px 0px 15px white",
         borderRadius: "50%",
-        border: "2px solid #e34c26",
+        border: "4px solid #e34c26",
         padding: "8px",
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
@@ -102,7 +103,7 @@ function Css() {
         alignItems: "center",
         boxShadow: "inset 0px 0px 15px white",
         borderRadius: "50%",
-        border: "2px solid #4895ef",
+        border: "4px solid #4895ef",
         padding: "8px",
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
@@ -122,7 +123,7 @@ function JavaScript() {
         alignItems: "center",
         boxShadow: "inset 0px 0px 15px white",
         borderRadius: "50%",
-        border: "2px solid #F0DB4F",
+        border: "4px solid #F0DB4F",
         padding: "8px",
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
@@ -136,18 +137,19 @@ export { JavaScript };
 function SquareSpace() {
   return (
     <span
+    className="border-4 border-gray-500 dark:border-gray-200"
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         boxShadow: "inset 0px 0px 15px lightgray",
         borderRadius: "50%",
-        border: "2px solid lightgray",
+        // border: "2px solid lightgray",
         padding: "8px",
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
     >
-      <FaSquarespace fontSize={30} color="lightgray" />
+      <FaSquarespace fontSize={30} className="text-gray-500 dark:text-gray-200" />
     </span>
   );
 }
@@ -162,12 +164,12 @@ function Figma() {
         alignItems: "center",
         boxShadow: "inset 0px 0px 15px white",
         borderRadius: "50%",
-        border: "2px solid #ae4dff",
+        border: "4px solid #ae4dff",
         padding: "8px",
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
     >
-      <FaFigma fontSize={30} color="#ae4dff" />
+      <FaFigma fontSize={30} />
     </span>
   );
 }
@@ -182,7 +184,7 @@ function Illustrator() {
         alignItems: "center",
         boxShadow: "inset 0px 0px 15px white",
         borderRadius: "50%",
-        border: "2px solid #f5c460",
+        border: "4px solid #f5c460",
         padding: "8px",
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
@@ -202,7 +204,7 @@ function Xd() {
         alignItems: "center",
         boxShadow: "inset 0px 0px 15px white",
         borderRadius: "50%",
-        border: "2px solid #9d4edd",
+        border: "4px solid #9d4edd",
         padding: "8px",
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
@@ -222,7 +224,7 @@ function Canva() {
         alignItems: "center",
         boxShadow: "inset 0px 0px 15px white",
         borderRadius: "50%",
-        border: "2px solid #20C4CB",
+        border: "4px solid #20C4CB",
         padding: "8px",
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
@@ -236,24 +238,23 @@ export { Canva };
 function LinkedIn() {
   return (
     <span
-    className="hover:transition-transform hover:-translate-y-1 hover:scale-110 border-[#0077b5] dark:border-blue-400 border-4"
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        boxShadow: "inset 0px 0px 20px #ced4da",
-        borderRadius: "50%",
-        // border: "3px solid #0077b5",
-        padding: "10px",
+    className="hover:transition-transform hover:-translate-y-1 hover:scale-110 "
+      // style={{
+      //   display: "flex",
+      //   justifyContent: "center",
+      //   alignItems: "center",
+      //   boxShadow: "inset 0px 0px 20px #ced4da",
+      //   borderRadius: "50%",
+      //   padding: "10px",
         
-      }}
+      // }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
     >
       {/* <FaLinkedin fontSize={30} color="lightblue" />
       <link rel="https://www.linkedin.com/in/leobardo-martinez/" href="linkedin" /> */}
 
       <a href="https://www.linkedin.com/in/leobardo-martinez/" target="_blank" rel="noopener noreferrer">
-  <FaLinkedin className="text-[#0077b5] dark:text-blue-400" size={40}/>
+  <FiLinkedin className="text-[#0077b5] dark:text-blue-400" size={40}/>
       </a>
 
 
@@ -265,23 +266,22 @@ export { LinkedIn };
 function GitHub() {
   return (
     <span
-    className="hover:transition-transform hover:-translate-y-1 hover:scale-110 border-[#7b2cbf] dark:border-purple-400 border-4"
+    className="hover:transition-transform hover:-translate-y-1 hover:scale-110 mr-5"
 
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        boxShadow: "inset 0px 0px 15px #ced4da",
-        borderRadius: "50%",
-        // border: "3px solid #7b2cbf",
-        padding: "10px",
-        marginRight: "10px",
-      }}
+      // style={{
+      //   display: "flex",
+      //   justifyContent: "center",
+      //   alignItems: "center",
+      //   boxShadow: "inset 0px 0px 15px #ced4da",
+      //   borderRadius: "50%",
+      //   padding: "10px",
+      //   marginRight: "10px",
+      // }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
     >
       {/* <FaGithub fontSize={30} color="violet" /> */}
       <a href="https://github.com/wid4444" target="_blank" rel="noopener noreferrer">
-  <FaGithub  size={40} className="text-[#7b2cbf] dark:text-purple-400"/>
+  <RiGithubLine  size={40} className="text-[#7b2cbf] dark:text-purple-400"/>
 </a>
      
     </span>

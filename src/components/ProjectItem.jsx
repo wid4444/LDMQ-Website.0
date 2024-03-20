@@ -2,7 +2,7 @@
 const ProjectItem = ({img, title, link, github, skills, libraries, paper, wireframe }) => {
   return (
    
-    <div className='relative flex items-center justify-center h-auto w-full  hover:shadow-md hover:shadow-gray-400 rounded-2xl group hover:bg-gradient-to-r from-emerald-100 to-violet-300  dark:hover:bg-gradient-to-r dark:from-cyan-950 dark:to-violet-950 '>
+    <div className='relative flex items-center justify-center h-auto w-full  hover:shadow-md hover:shadow-gray-400 rounded-2xl group hover:bg-gradient-to-t from-emerald-100 to-violet-300  dark:hover:bg-gradient-to-t dark:from-cyan-950 dark:to-violet-950 '>
         <img src={img} alt="/" className='rounded-xl group-hover:opacity-10 w-full'/>
         <div className='hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
             <h3 className='w-screen pb-4 text-xl font-bold tracking-wider text-center text-[#001b5e] dark:text-gray-300'>

@@ -4,56 +4,6 @@ import Resume from './Resume';
 const data = [
   {
     id: 1,
-    year: 2022,
-    title: "Software/Web Developer",
-    company: "Freelancer",
-    duration: "2 Years Ongoing",
-    details: [
-      <ol className='list'>
-        <li>Specialize in the design, build and deployment of sophisticated websites tailored to the unique needs of clients.</li>
-        <li>Expertly develop and sustain web applications, ensuring optimal performance and user experience.</li>
-        <li>Engage in collaborative discussions with clients to ascertain website specifications, while offering expert technical advice and solutions.</li>
-      </ol>
-      // "- Specialize in the design, build and deployment of sophisticated websites tailored to the unique needs of clients.",
-      // <br />,
-      // "- Expertly develop and sustain web applications, ensuring optimal performance and user experience.",
-      // <br />,
-      // "- Engage in collaborative discussions with clients to ascertain website specifications, while offering expert technical advice and solutions.",
-    ],
-  },
-  {
-    id: 2,
-    year: 2022,
-    title: "Director of Software Development",
-    company: "Avi-IT",
-    duration: "2 Years Ongoing Volunteering",
-    details: [
-      <ol className='list'>
-        <li>Oversee all software-related aspects within Avi I.T., including the maintenance and enhancement of their website</li>
-        <li>Lead Avi I.T.'s Software Development division, providing cost-effective solutions tailored to the needs of small businesses</li>
-        <li>Implement cutting-edge software development applications and practices to improve efficiency and productivity</li>
-        <li>Coordinate with the team to schedule and communicate upcoming system maintenance and updates, ensuring minimal disruption to operations</li>
-        <li>Continually monitor and evaluate software performance, implementing improvements as necessary</li>
-        <li>Foster a collaborative environment, encouraging knowledge sharing and team growth</li>
-      </ol>
-      
-        // "- Oversee all software-related aspects within Avi I.T., including the maintenance and enhancement of their website.",
-        // <br />,
-        // "- Lead Avi I.T.'s Software Development division, providing cost-effective solutions tailored to the needs of small businesses.",
-        // <br />,
-        // "- Implement cutting-edge software development applications and practices to improve efficiency and productivity.",
-        // <br />,
-        // "- Coordinate with the team to schedule and communicate upcoming system maintenance and updates, ensuring minimal disruption to operations.",
-        // <br />,
-        // "- Continually monitor and evaluate software performance, implementing improvements as necessary.",
-        // <br />,
-        // "- Foster a collaborative environment, encouraging knowledge sharing and team growth."
-      
-    ],
-      
-  },
-  {
-    id: 3,
     year: 2023,
     title: "Front-End/Data Visualizations Developer Fellow",
     company: "Tech Impact",
@@ -87,6 +37,57 @@ const data = [
       // "- Oversee all technical aspects of implementing elements of graphic design into front-end interfaces.",
     ],
   },
+  {
+    id: 2,
+    year: 2022,
+    title: "Software/Web Developer",
+    company: "Freelancer",
+    duration: "2 Years Ongoing",
+    details: [
+      <ol className='list'>
+        <li>Specialize in the design, build and deployment of sophisticated websites tailored to the unique needs of clients.</li>
+        <li>Expertly develop and sustain web applications, ensuring optimal performance and user experience.</li>
+        <li>Engage in collaborative discussions with clients to ascertain website specifications, while offering expert technical advice and solutions.</li>
+      </ol>
+      // "- Specialize in the design, build and deployment of sophisticated websites tailored to the unique needs of clients.",
+      // <br />,
+      // "- Expertly develop and sustain web applications, ensuring optimal performance and user experience.",
+      // <br />,
+      // "- Engage in collaborative discussions with clients to ascertain website specifications, while offering expert technical advice and solutions.",
+    ],
+  },
+  {
+    id: 3,
+    year: 2022,
+    title: "Director of Software Development",
+    company: "Avi-IT",
+    duration: "2 Years Ongoing Volunteering",
+    details: [
+      <ol className='list'>
+        <li>Oversee all software-related aspects within Avi I.T., including the maintenance and enhancement of their website</li>
+        <li>Lead Avi I.T.'s Software Development division, providing cost-effective solutions tailored to the needs of small businesses</li>
+        <li>Implement cutting-edge software development applications and practices to improve efficiency and productivity</li>
+        <li>Coordinate with the team to schedule and communicate upcoming system maintenance and updates, ensuring minimal disruption to operations</li>
+        <li>Continually monitor and evaluate software performance, implementing improvements as necessary</li>
+        <li>Foster a collaborative environment, encouraging knowledge sharing and team growth</li>
+      </ol>
+      
+        // "- Oversee all software-related aspects within Avi I.T., including the maintenance and enhancement of their website.",
+        // <br />,
+        // "- Lead Avi I.T.'s Software Development division, providing cost-effective solutions tailored to the needs of small businesses.",
+        // <br />,
+        // "- Implement cutting-edge software development applications and practices to improve efficiency and productivity.",
+        // <br />,
+        // "- Coordinate with the team to schedule and communicate upcoming system maintenance and updates, ensuring minimal disruption to operations.",
+        // <br />,
+        // "- Continually monitor and evaluate software performance, implementing improvements as necessary.",
+        // <br />,
+        // "- Foster a collaborative environment, encouraging knowledge sharing and team growth."
+      
+    ],
+      
+  },
+ 
 
   // {
   //     year: 2024,

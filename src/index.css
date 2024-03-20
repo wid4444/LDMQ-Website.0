@@ -79,3 +79,7 @@ input:checked + .slider:before {
 .list li {
   list-style: inside;
 }
+/* .email {
+  text-decoration: underline  ;
+ 
+} */

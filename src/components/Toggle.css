@@ -1,7 +1,7 @@
 .toggle-container {
-  position: absolute;
-  top: 0px;
-  left: 20px;
+  position: fixed;
+  top: -10px;
+  left: 10px;
   height: auto;
 }
 .toggle {
@@ -125,6 +125,20 @@
   -o-transition: left 0.4s ease-in-out;
   transition: left 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
+@media screen and (max-width: 1050px){
+  .toggle-container {
+    top: 0px;
+    left: 9px;
+  }
+  
+}
+@media screen and (max-width: 830px){
+  .toggle-container {
+    top: 0px;
+    left: 5px;
+  }
+  
+}
  @media screen and (max-width: 768px){
     .toggle-container {
       top: 0px;
@@ -132,3 +146,11 @@
     }
     
  }
+ @media screen and (max-width: 450px){
+  .toggle-container {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+  }
+  
+}
