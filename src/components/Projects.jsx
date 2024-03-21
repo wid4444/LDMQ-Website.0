@@ -25,7 +25,7 @@ const Projects = () => {
       <div className="grid sm:grid-cols-2 gap-1">
         <ProjectItem 
         img={education} 
-        title="Innovation Education"
+        title="Education Enrollment-Workforce Pipeline"
           link="https://secondary-to-post-secondary-student-pipeline.pages.dev/"
           github="https://github.com/de-data-lab/secondary-to-post-secondary-student-pipeline"
           wireframe='https://xd.adobe.com/view/5e764acf-300e-4540-bd13-e8b0a444cdf6-0b25/'
@@ -42,7 +42,7 @@ const Projects = () => {
           />
         <ProjectItem 
         img={underserved} 
-        title="Innovation Underserved" 
+        title="Recidivism & Prison Gerrymandering" 
         link="https://innovation-underserved.pages.dev/"
           github="https://github.com/de-data-lab/innovation-underserved"
           skills={
