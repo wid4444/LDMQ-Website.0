@@ -1,6 +1,7 @@
 // import React from "react";
 import ProjectItem from "./ProjectItem";
 import TechStack, { Sass, Vue, React, Html, Css, JavaScript, SquareSpace, Figma, Illustrator, Xd, Canva } from "./TechStack";
+import Popup from './Popup';
 // import { Vue } from "./TechStack";
 
 // import DannyImg from '../assets/Danny.jpeg'
@@ -39,7 +40,16 @@ const Projects = () => {
           Xd={Xd}
           />
           } 
+          description={
+          <Popup 
+          description="Password: Education24!,  
+          This is an open-source methodology for integrating multi-level longitudinal data to quantitatively represent Delaware's secondary school-to-workforce pipeline. Created an interactive website to visualize enrollment and graduation counts for Delaware students, providing policymakers with valuable insights for data-driven decision-making in fostering a resilient labor market."
+          
           />
+
+          }
+          />
+          
         <ProjectItem 
         img={underserved} 
         title="Recidivism & Prison Gerrymandering" 
@@ -54,6 +64,9 @@ const Projects = () => {
           // Canva={Canva}
           />
           }
+          description={
+            <Popup description="This is an informational website spotlighting two critical criminal justice policy issues, offering a comparative analysis between Delaware and the wider United States."/>
+            }
         />
 
 
@@ -71,6 +84,9 @@ const Projects = () => {
           Xd={Xd}
           />
           }
+          description={
+            <Popup description="This is an app with a transformative initiative to empower non-profits to assess their data maturity and align it with organizational goals. Facilitated clients in evaluating and enhancing their data processes, culminating in the creation of visually engaging dashboards to represent key insights,"/>
+            }
         />
 
 {/* <ProjectItem 
@@ -106,6 +122,9 @@ const Projects = () => {
           Html={Html}
           />
           }
+          description={
+            <Popup description="This is a non-profit's website that I redesigned using Vue.js adding mobile responsiveness, a hamburger menu, a contact form, and a carousel slideshow."/>
+            }
           />
         <ProjectItem 
         img={monica} 
@@ -118,6 +137,9 @@ const Projects = () => {
           Canva={Canva}
           />
         }
+        description={
+          <Popup description="This is an artist’s website that I designed and built using Squarespace to help her showcase her work"/>
+          }
         />
         {/* <ProjectItem img={varImg} title="Var App" />
         <ProjectItem img={var2Img} title="Var Second App" /> */}
