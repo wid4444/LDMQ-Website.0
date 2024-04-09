@@ -23,7 +23,7 @@ const Projects = () => {
         Projects
       </h1>
       <p className="text-center py-8 dark:text-stone-300 text-3xl">Tech Impact Projects</p>
-      <div className="grid sm:grid-cols-2 gap-1">
+      <div className="grid sm:grid-cols-2 gap-10">
         <ProjectItem 
         img={education} 
         title="Education Enrollment-Workforce Pipeline"

@@ -17,7 +17,7 @@ function Popup({ description }) {
 
   return (
     <div>
-      <button className='popup-btn-show' onClick={togglePopup}>Show Description</button>
+      <button className='popup-btn-show  ease-in-out hover:-translate-y-1 hover:scale-125' onClick={togglePopup}>Show Description</button>
       {isOpen && (
         <div className="popup bg-gray-300 dark:bg-sky-950">
           

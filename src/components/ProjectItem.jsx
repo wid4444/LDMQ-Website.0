@@ -9,7 +9,6 @@ const ProjectItem = ({img, title, link, github, skills, libraries, paper, wirefr
             <h3 className=' w-full mt-8 pb-4 text-xl font-bold tracking-wider text-center text-[#001b5e] dark:text-gray-300'>
                 {title}
             </h3>
-            <p className='w-screen flex justify-center align-middle pb-4 pt-2 text-white text-center ' >{skills}</p>
             <p className='flex justify-center align-middle pt-2 text-white text-center ' >{libraries}</p>
             
 <div className= 'w-full flex items-center justify-center space-x-2'>
@@ -35,8 +34,10 @@ const ProjectItem = ({img, title, link, github, skills, libraries, paper, wirefr
             </a>
             )}
             </div>
+            <p className='w-screen flex justify-center align-middle pb-4 pt-2 text-white text-center ' >{skills}</p>
+
             <div>
-            <p className='mt-5 pb-4 text-xs tracking-wider text-center text-[#001b5e] dark:text-gray-300'>
+            <p className='pb-4 text-sm tracking-wider text-center text-[#001b5e] dark:text-gray-300 ease-in-out '>
                 {description}
                 
             </p>

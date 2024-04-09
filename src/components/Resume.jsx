@@ -8,7 +8,7 @@ function Resume() {
 
 
   return (
-    <div id='resume' className=' max-w-[1040px] m-auto  pt-10 pb-60 relative flex-column items-center justify-center h-auto w-full '>
+    <div id='resume' className=' max-w-[1040px] m-auto  pt-10  relative flex-column items-center justify-center h-auto w-full '>
         {/* <h1 className='py-4 text-4xl font-bold text-center text-[#001b5e] dark:text-gray-300'>Resume</h1> */}
        {/* <div className='border flex flex-col justify-center h-auto w-full p-10'> */}
         {/* <div className='border flex justify-center h-auto w-full'> */}

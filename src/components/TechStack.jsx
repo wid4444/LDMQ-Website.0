@@ -31,7 +31,7 @@ function Vue() {
         // marginRight: "5px",
       }}
     >
-      <FaVuejs fontSize={30} color="#41B883" />
+      <FaVuejs fontSize={20} color="#41B883" />
     </span>
   );
 }
@@ -51,7 +51,7 @@ function Sass() {
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
     >
-      <FaSass fontSize={30} color="#cc6699" />
+      <FaSass fontSize={20} color="#cc6699" />
     </span>
   );
 }
@@ -70,7 +70,7 @@ function React() {
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
     >
-      <FaReact fontSize={30} color="#61dbfb" />
+      <FaReact fontSize={20} color="#61dbfb" />
     </span>
   );
 }
@@ -89,7 +89,7 @@ function Html() {
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
     >
-      <FaHtml5 fontSize={30} color="#e34c26" />
+      <FaHtml5 fontSize={20} color="#e34c26" />
     </span>
   );
 }
@@ -108,7 +108,7 @@ function Css() {
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
     >
-      <FaCss3Alt fontSize={30} color="#4895ef" />
+      <FaCss3Alt fontSize={20} color="#4895ef" />
     </span>
   );
 }
@@ -128,7 +128,7 @@ function JavaScript() {
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
     >
-      <IoLogoJavascript fontSize={30} color="#F0DB4F" />
+      <IoLogoJavascript fontSize={20} color="#F0DB4F" />
     </span>
   );
 }
@@ -149,7 +149,7 @@ function SquareSpace() {
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
     >
-      <FaSquarespace fontSize={30} className="text-gray-500 dark:text-gray-200" />
+      <FaSquarespace fontSize={20} className="text-gray-500 dark:text-gray-200" />
     </span>
   );
 }
@@ -169,7 +169,7 @@ function Figma() {
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
     >
-      <FaFigma fontSize={30} />
+      <FaFigma fontSize={20} />
     </span>
   );
 }
@@ -189,7 +189,7 @@ function Illustrator() {
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
     >
-      <SiAdobeillustrator fontSize={30} color="#f5c460" />
+      <SiAdobeillustrator fontSize={20} color="#f5c460" />
     </span>
   );
 }
@@ -209,7 +209,7 @@ function Xd() {
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
     >
-      <SiAdobexd fontSize={30} color="#9d4edd" />
+      <SiAdobexd fontSize={20} color="#9d4edd" />
     </span>
   );
 }
@@ -229,7 +229,7 @@ function Canva() {
       }}
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
     >
-      <SiCanva fontSize={30} color="#20C4CB" />
+      <SiCanva fontSize={20} color="#20C4CB" />
     </span>
   );
 }
