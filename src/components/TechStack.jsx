@@ -13,8 +13,10 @@ import {
 } from "react-icons/fa";
 import { SiAdobeillustrator, SiAdobexd, SiCanva } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
-import { RiGithubLine } from "react-icons/ri";
-import { FiLinkedin } from "react-icons/fi";
+// import { RiGithubLine } from "react-icons/ri";
+// import { FiLinkedin } from "react-icons/fi";
+import { FaGithub } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
 
 function Vue() {
   return (
@@ -254,7 +256,7 @@ function LinkedIn() {
       <link rel="https://www.linkedin.com/in/leobardo-martinez/" href="linkedin" /> */}
 
       <a href="https://www.linkedin.com/in/leobardo-martinez/" target="_blank" rel="noopener noreferrer">
-  <FiLinkedin className="text-[#0077b5] dark:text-blue-400" size={40}/>
+  <FaLinkedin  className="text-[#0077b5] dark:text-blue-400" size={40}/>
       </a>
 
 
@@ -281,7 +283,7 @@ function GitHub() {
     >
       {/* <FaGithub fontSize={30} color="violet" /> */}
       <a href="https://github.com/wid4444" target="_blank" rel="noopener noreferrer">
-  <RiGithubLine  size={40} className="text-[#7b2cbf] dark:text-purple-400"/>
+  <FaGithub  size={40} className="text-[#7b2cbf] dark:text-purple-400"/>
 </a>
      
     </span>

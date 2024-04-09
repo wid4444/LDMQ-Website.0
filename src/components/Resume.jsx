@@ -1,9 +1,10 @@
 import { FaArrowRight } from "react-icons/fa";
+import resume from '../assets/resume.pdf'
 
 function Resume() {
 
     const openResume = () => {
-        window.open('https://docs.google.com/document/d/11TdOIKU6FDGqYU4xHdSZz22D72ondlr2ixmKI8N2wuA/edit?usp=sharing', '_blank');
+        window.open(resume, '_blank');
       };
 
 
