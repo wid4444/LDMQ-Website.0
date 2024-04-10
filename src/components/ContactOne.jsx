@@ -21,7 +21,7 @@ function ContactForm() {
        
         </div>
      <div className='flex justify-center align-middle'>
-     <a href="mailto:ldmq4444@gmail.com" target="_blank" rel="noreferrer">
+     <a href="mailto:ldmq4444@gmail.com"  rel="noreferrer">
           <FaEnvelope size={40} className="cursor-pointer z-50 mr-10 hover:transition-transform hover:-translate-y-1 hover:scale-110 text-lime-600 dark:text-lime-500"/>
         </a>
         <TechStack 

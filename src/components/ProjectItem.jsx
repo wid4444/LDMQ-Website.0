@@ -30,7 +30,7 @@ const ProjectItem = ({img, title, link, github, skills, libraries, paper, wirefr
             
              {paper && (
             <a href={paper} target="_blank" rel="noopener noreferrer">
-                <p className='hover:transition-transform hover:-translate-y-1 hover:scale-110 text-center py-2 px-4 hover:border-green-50 hover:border-solid hover:border hover:shadow-inner dark:shadow-green-200 hover:shadow-fuchsia-200 rounded-3xl hover:bg-purple-700 hover:dark:bg-green-600 text-gray-800 hover:text-gray-100 dark:text-gray-100 cursor-pointer text-md'>Paper</p>
+                <p className='hover:transition-transform hover:-translate-y-1 hover:scale-110 text-center py-2 px-4 hover:border-green-50 hover:border-solid hover:border hover:shadow-inner dark:shadow-green-200 hover:shadow-fuchsia-200 rounded-3xl hover:bg-purple-700 hover:dark:bg-green-600 text-gray-800 hover:text-gray-100 dark:text-gray-100 cursor-pointer text-md'>Publication</p>
             </a>
             )}
             </div>
