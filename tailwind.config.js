@@ -22,9 +22,10 @@ export default {
         'transform': 'transform',
       },
     },
+    
     screens: {
-      'xsm': '450px',
-      // => @media (min-width: 450px) { ... }
+      'xsm': '430px',
+      // => @media (min-width: 430px) { ... }
 
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
