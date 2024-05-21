@@ -12,7 +12,8 @@ import monica from "../assets/monica.png";
 import education from "../assets/inno-education.png";
 import underserved from "../assets/inno-underserved.png";
 import westend from "../assets/we-sire.png";
-// import waSire from "../assets/wa-sire.png";
+import nbe from "../assets/inno-nbe.png";
+import waSire from "../assets/wa-sire.png";
 
 // import { FaVuejs, FaSass, FaSquarespace } from "react-icons/fa";
 
@@ -28,7 +29,7 @@ const Projects = () => {
         img={education} 
         title="Education Enrollment-Workforce Pipeline"
           link="https://secondary-to-post-secondary-student-pipeline.pages.dev/"
-          github="https://github.com/de-data-lab/secondary-to-post-secondary-student-pipeline"
+          // github="https://github.com/de-data-lab/secondary-to-post-secondary-student-pipeline"
           wireframe='https://xd.adobe.com/view/5e764acf-300e-4540-bd13-e8b0a444cdf6-0b25/'
           paper={educationPaper}
           skills={
@@ -54,7 +55,7 @@ const Projects = () => {
         img={underserved} 
         title="Recidivism & Prison Gerrymandering" 
         link="https://innovation-underserved.pages.dev/"
-          github="https://github.com/de-data-lab/innovation-underserved"
+          // github="https://github.com/de-data-lab/innovation-underserved"
           skills={
           <TechStack 
           React={React}
@@ -74,7 +75,7 @@ const Projects = () => {
         img={westend} 
         title="West End SIRE" 
         link="https://west-end-social-impact-report.pages.dev/"
-          github="https://github.com/de-data-lab/west-end-social-impact-report"
+          // github="https://github.com/de-data-lab/west-end-social-impact-report"
           skills={
           <TechStack 
           React={React}
@@ -85,16 +86,35 @@ const Projects = () => {
           />
           }
           description={
-            <Popup description="This is an app with a transformative initiative to empower non-profits to assess their data maturity and align it with organizational goals. Facilitated clients in evaluating and enhancing their data processes, culminating in the creation of visually engaging dashboards to represent key insights,"/>
+            <Popup description="This is an app with a transformative initiative to empower non-profits to assess their data maturity and align it with organizational goals. Facilitated clients in evaluating and enhancing their data processes, culminating in the creation of visually engaging dashboards to represent key insights"/>
             }
+        />
+        <ProjectItem 
+        img={nbe} 
+        title="Delaware Solar Energy Transition" 
+        link="https://innovation-natural-built-env.pages.dev/"
+          // github="https://github.com/de-data-lab/innovation-natural-built-env/tree/solar-energy-transition-v0"
+          // wireframe='https://xd.adobe.com/view/ce76f7b3-2bb9-48e7-a9c7-1e23098d7403-9b25/'
+          skills={
+          <TechStack 
+          React={React}
+          JavaScript={JavaScript}
+          Css={Css}
+          Html={Html}
+          // Xd={Xd}
+          />
+          }
+          // description={
+          //   <Popup description="Description coming up"/>
+          //   }
         />
 
 {/* <ProjectItem 
         img={waSire} 
         title="Wilmington Alliance SIRE" 
         // link="https://west-end-social-impact-report.pages.dev/"
-          // github="https://github.com/de-data-lab/west-end-social-impact-report"
-          wireframe='https://xd.adobe.com/view/ce76f7b3-2bb9-48e7-a9c7-1e23098d7403-9b25/'
+          // github="https://github.com/de-data-lab/wa-sire"
+          wireframe='https://xd.adobe.com/view/6b6d32ec-0848-4355-991b-611d6975f4f5-3e3e/'
           skills={
           <TechStack 
           // React={React}
@@ -104,6 +124,9 @@ const Projects = () => {
           Xd={Xd}
           />
           }
+          description={
+            <Popup description="description"/>
+            }
         /> */}
       </div>
       <br />
