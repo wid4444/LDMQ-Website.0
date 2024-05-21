@@ -13,7 +13,9 @@ import education from "../assets/inno-education.png";
 import underserved from "../assets/inno-underserved.png";
 import westend from "../assets/we-sire.png";
 import nbe from "../assets/inno-nbe.png";
-import waSire from "../assets/wa-sire.png";
+// import waSire from "../assets/wa-sire.png";
+import danny from "../assets/danny.png";
+
 
 // import { FaVuejs, FaSass, FaSquarespace } from "react-icons/fa";
 
@@ -147,6 +149,23 @@ const Projects = () => {
           }
           description={
             <Popup description="This is a non-profit's website that I redesigned using Vue.js adding mobile responsiveness, a hamburger menu, a contact form, and a carousel slideshow."/>
+            }
+          />
+          <ProjectItem
+          img={danny}
+          title="V0 Portfolio Website"
+          link="https://ldmq.vercel.app/#/"
+          github="https://github.com/wid4444/LDMQ"
+          skills={
+          <TechStack 
+          Vue={Vue} 
+          Css={Css}
+          JavaScript={JavaScript}
+          Html={Html}
+          />
+          }
+          description={
+            <Popup description="This is my first portfolio website, where I highlight my skills and showcase the projects I've worked on"/>
             }
           />
         <ProjectItem 
