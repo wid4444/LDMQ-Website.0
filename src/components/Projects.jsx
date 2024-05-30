@@ -13,7 +13,7 @@ import education from "../assets/inno-education.png";
 import underserved from "../assets/inno-underserved.png";
 import westend from "../assets/we-sire.png";
 import nbe from "../assets/inno-nbe.png";
-// import waSire from "../assets/wa-sire.png";
+import waSire from "../assets/wa-sire.png";
 import danny from "../assets/danny.png";
 
 
@@ -106,32 +106,36 @@ const Projects = () => {
           // Xd={Xd}
           />
           }
-          // description={
-          //   <Popup description="Description coming up"/>
-          //   }
+          description={
+            <Popup description="This interactive dashboard provides a clear geospatial overview of the evolution of solar energy and the distribution of Green Energy Program Grants in Delaware. It features two comprehensive, easy-to-understand maps that present key information by state legislative district in Delaware from 2015 to 2021, both annually and cumulatively."/>
+            }
         />
 
-{/* <ProjectItem 
+<ProjectItem 
         img={waSire} 
         title="Wilmington Alliance SIRE" 
-        // link="https://west-end-social-impact-report.pages.dev/"
+        link="https://wilmington-alliance.pages.dev/"
           // github="https://github.com/de-data-lab/wa-sire"
           wireframe='https://xd.adobe.com/view/6b6d32ec-0848-4355-991b-611d6975f4f5-3e3e/'
           skills={
           <TechStack 
-          // React={React}
-          // JavaScript={JavaScript}
-          // Css={Css}
-          // Html={Html}
+          React={React}
+          JavaScript={JavaScript}
+          Css={Css}
+          Html={Html}
           Xd={Xd}
           />
           }
           description={
-            <Popup description="description"/>
+            <Popup description="
+            This dashboard empowers WA to assess its data maturity and align with its goals. It helps clients evaluate and enhance their data processes"/>
             }
-        /> */}
+        />
       </div>
       <br />
+
+
+
       <p className="text-center py-8 dark:text-stone-300 text-3xl">Websites</p>
       <div className="grid sm:grid-cols-2 gap-5">
         <ProjectItem
