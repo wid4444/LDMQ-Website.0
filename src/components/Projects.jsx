@@ -114,7 +114,7 @@ const Projects = () => {
 <ProjectItem 
         img={waSire} 
         title="Wilmington Alliance SIRE" 
-        link="https://wilmington-alliance.pages.dev/"
+        link="https://wa-sire.pages.dev/"
           // github="https://github.com/de-data-lab/wa-sire"
           wireframe='https://xd.adobe.com/view/6b6d32ec-0848-4355-991b-611d6975f4f5-3e3e/'
           skills={
