@@ -2,9 +2,9 @@
 const WorkItem = ({ year, title, duration, details, company }) => {
   return (
     <>
-    <ol className='flex flex-col md:flex-row relative border-l border-green-500 dark:border-teal-400' >
+    <ol className='flex flex-col md:flex-row relative border-l border-[#2EA1E5] dark:border-teal-400' >
         <li className='mb-10 ml-4'>
-            <div className='absolute w-3 h-3 bg-blue-400 dark:bg-purple-500 rounded-full mt-1.5 -left-1.5 border-white '/>
+            <div className='absolute w-3 h-3 bg-[#ff6700] dark:bg-[#ff3cc7] rounded-full mt-1.5 -left-1.5 border-white '/>
             <p className='flex flex-wrap pb-2 gap-4 flex-row items-center justify-start text-xs md:text-sm'>
                 <span className='inline-block px-2 py-1 font-semibold text-lg text-white bg-[#001b5e] rounded-md dark:bg-slate-300 dark:text-[#001b5e]'>{year}</span>
                 <span className='text-xl font-semibold text-gray-600 dark:text-emerald-500'>{title}</span>

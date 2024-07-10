@@ -40,7 +40,7 @@ const data = [
   {
     id: 2,
     year: 2022,
-    title: "Software/Web Developer",
+    title: "Web Developer Advisor",
     company: "Freelancer",
     duration: "2 Years Ongoing",
     details: [
@@ -59,7 +59,7 @@ const data = [
   {
     id: 3,
     year: 2022,
-    title: "Director of Software Development",
+    title: "Lead of Software Development",
     company: "Avi-IT",
     duration: "2 Years Ongoing Volunteering",
     details: [

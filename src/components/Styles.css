@@ -88,3 +88,7 @@ transition: left 0.4s ease-in-out, transform 0.4s ease-in-out;
     color: white;
     cursor: pointer;
   }
+  .section .selected {
+    background-color: #f0f0f0; /* Example background color */
+    /* Add other styles for selected state here */
+  }

@@ -90,27 +90,29 @@ function App() {
 }, []);
 
 
-const [currentSection, setCurrentSection] = useState('');
+// const [currentSection, setCurrentSection] = useState('');
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setCurrentSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.7 } // Adjust this value based on your needs
-    );
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       entries => {
+//         entries.forEach(entry => {
+//           if (entry.isIntersecting) {
+//             setCurrentSection(entry.target.id);
+//           }
+//         });
+//       },
+//       { threshold: 0.7 } // Adjust this value based on your needs
+//     );
 
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => observer.observe(section));
+//     const sections = document.querySelectorAll('section');
+//     sections.forEach(section => observer.observe(section));
 
-    return () => {
-      sections.forEach(section => observer.unobserve(section));
-    };
-  }, []);
+//     return () => {
+//       sections.forEach(section => observer.unobserve(section));
+//     };
+//   }, []);
+
+
 
 
   return (

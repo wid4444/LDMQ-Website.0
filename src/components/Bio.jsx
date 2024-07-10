@@ -2,7 +2,7 @@ import danny from '../assets/danny.jpg'
 
 function Bio() {
   return (
-    <div id='bio' className='max-w-[1040px] m-auto md:pl-20 p-4 pb-30 py-16 relative flex-column items-center justify-center h-auto w-full '>
+    <div id='bio' className='max-w-[1040px] m-auto md:pl-20 p-4 pb-30 py-16 relative flex-column items-center justify-center h-auto w-full'>
                   {/* <h1 className='py-4 text-4xl font-bold text-center text-[#001b5e] dark:text-gray-300'>Bio</h1> */}
         <div className='flex justify-center h-auto w-full p-10'>
         <img src={danny} alt="" className='relative flex items-center justify-center h-auto w-full shadow-2xl shadow-gray-400 hover:transition-transform hover:-translate-y-1 hover:scale-110 motion-reduce:transition-none motion-reduce:hover:transform-none hover:shadow-md hover:shadow-gray-400 rounded-2xl group' style={{borderRadius:'50%', width:"300px", }}/>

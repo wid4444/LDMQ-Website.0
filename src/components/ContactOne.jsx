@@ -10,7 +10,7 @@ function ContactForm() {
 
   return (
     <>
-    <div id='contact' className='max-w-[800px] md:pl-20 m-auto px-20 py-20 pb-20 xsm:px-5 flex-col justify-center text-center'>
+    <div id='contact' className='max-w-[800px] h-[465px] md:pl-20 m-auto px-20 py-20 pb-20 xsm:px-5 flex-col justify-center text-center'>
 
 
       

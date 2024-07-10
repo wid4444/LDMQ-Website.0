@@ -1,4 +1,4 @@
-import { useState,  } from "react";
+import { useState, useEffect  } from "react";
 import {
   // AiOutlineMenu,
   // AiOutlineHome,
@@ -36,7 +36,7 @@ const Sidenav = () => {
     console.log("state change");
   };
 
-  const [activeLink, setActiveLink] = useState(null);
+  const [activeLink, setActiveLink] = useState(true);
 
   const handleMouseEnter = (link) => {
     setActiveLink(link);
@@ -44,6 +44,65 @@ const Sidenav = () => {
 
   const handleMouseLeave = () => {
     setActiveLink(null);
+  };
+
+  // const [activeLink, setActiveLink] = useState('');
+
+  // useEffect(() => {
+  //   const handleHashChange = () => {
+  //     setActiveLink(window.location.hash);
+  //   };
+
+  //   // Set initial active link based on current hash
+  //   handleHashChange();
+
+  //   // Listen for hash changes
+  //   window.addEventListener('hashchange', handleHashChange);
+
+  //   // Cleanup listener
+  //   return () => window.removeEventListener('hashchange', handleHashChange);
+  // }, []);
+
+  // const getHighlightClass = (href) => {
+  //   return activeLink === href ? 'border-2 border-[#2EA1E5] dark:border-[#49DBAF]' : '';
+  // };
+
+  const [currentSection, setCurrentSection] = useState('');
+
+  useEffect(() => {
+    const sections = [
+      { id: 'main', ref: document.getElementById('main') },
+      { id: 'bio', ref: document.getElementById('bio') },
+      { id: 'experience', ref: document.getElementById('experience') },
+      { id: 'projects', ref: document.getElementById('projects') },
+      { id: 'resume', ref: document.getElementById('resume') },
+      { id: 'contact', ref: document.getElementById('contact') },
+    ];
+
+    const handleScroll = () => {
+      const currentOffset = window.pageYOffset + window.innerHeight / 2; // Adjust as needed
+
+      const current = sections.find(section => 
+        section.ref && // Check if section.ref is not null
+        section.ref.offsetTop <= currentOffset &&
+        section.ref.offsetTop + section.ref.offsetHeight > currentOffset
+      );
+
+      if (current) {
+        setCurrentSection(current.id);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Initial check in case the page is not at the top when loaded
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const getHighlightClass = (id) => {
+    return currentSection === id ? 'text-[#ff6700] dark:text-[#ff3cc7]' : '';
   };
 
   // const [currentSection, setCurrentSection] = useState("");
@@ -96,6 +155,17 @@ const Sidenav = () => {
   //     window.removeEventListener("scroll", handleScroll);
   //   };
   // }, []);
+  const [selectedSection, setSelectedSection] = useState('');
+
+ // Function to update the selected section
+ const handleSectionClick = (sectionId) => {
+   setSelectedSection(sectionId);
+ };
+ 
+ // Function to determine the className based on selection
+ const getSectionClassName = (sectionId) => {
+   return `section ${selectedSection === sectionId ? 'selected' : ''}`;
+ };
 
   return (
     <div>
@@ -168,23 +238,23 @@ const Sidenav = () => {
       )}
       <div className="md:block hidden fixed top-[35%] z-10 ml-4 md:ml-0">
         <div className="flex flex-col">
-          <a
-            href="#main"
-            title="Home"
-            onMouseEnter={() => handleMouseEnter("Home")}
-            onMouseLeave={handleMouseLeave}
-            className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold  text-blue-800   dark:text-green-600  ease-in duration-300"
-          >
-            {/* <AiFillHome size={25} /> */}
-            {activeLink === "Home" ? "Home" : <IoHome size={25} />}
-          </a>
+        <a
+        href="#main"
+        title="Home"
+        className={`rounded-2xl m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5]   dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('main')}`}
+
+        // className={`rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('home')}`}
+      >
+        {activeLink === "#main" ? "Home" : <IoHome size={25}/>}
+      </a>
 
           <a
             href="#bio"
             title="Bio"
-            onMouseEnter={() => handleMouseEnter("Bio")}
-            onMouseLeave={handleMouseLeave}
-            className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-blue-800 dark:text-green-600 ease-in duration-300"
+            // onMouseEnter={() => handleMouseEnter("Bio")}
+            // onMouseLeave={handleMouseLeave}
+            className={`rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5]   dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('bio')}`}
+            // className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5]   dark:text-[#49DBAF] ease-in duration-300"
           >
             {/* <IoPersonOutline size={25} className="text-lg text-bold"/> */}
             {activeLink === "Bio" ? "Bio" : <FaUserTie size={25} />}
@@ -192,9 +262,11 @@ const Sidenav = () => {
           <a
             href="#experience"
             title="Experience"
-            onMouseEnter={() => handleMouseEnter("Experience")}
-            onMouseLeave={handleMouseLeave}
-            className="rounded-full m-2 p-4 cursor-pointer hover:scale-110  text-blue-800 dark:text-green-600 ease-in duration-300"
+            // onMouseEnter={() => handleMouseEnter("Experience")}
+            // onMouseLeave={handleMouseLeave}
+            className={`rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5]   dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('experience')}`}
+
+            // className="rounded-full m-2 p-4 cursor-pointer hover:scale-110  text-[#ff6700]   dark:text-[#ff3cc7] ease-in duration-300"
           >
             {/* <MdWorkOutline size={25} /> */}
             {activeLink === 'Experience' ? 'Experience' :<BiSolidBriefcaseAlt2 size={25} />}
@@ -212,9 +284,11 @@ const Sidenav = () => {
           <a
             href="#projects"
             title="Projects"
-            onMouseEnter={() => handleMouseEnter("Projects")}
-            onMouseLeave={handleMouseLeave}
-            className="rounded-full m-2 p-4 cursor-pointer hover:scale-110  text-blue-800 dark:text-green-600  ease-in duration-300"
+            // onMouseEnter={() => handleMouseEnter("Projects")}
+            // onMouseLeave={handleMouseLeave}
+            className={`rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('projects')}`}
+
+            // className="rounded-full m-2 p-4 cursor-pointer hover:scale-110  text-[#2EA1E5]   dark:text-[#49DBAF]  ease-in duration-300"
           >
             {/* <AiOutlineAppstore size={25} /> */}
             {activeLink === 'Projects' ? 'Projects' :<IoApps size={25}  />}
@@ -223,9 +297,11 @@ const Sidenav = () => {
           <a
             href="#contact"
             title="Contact"
-            onMouseEnter={() => handleMouseEnter("Contact")}
-            onMouseLeave={handleMouseLeave}
-            className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 text-extrabold text-blue-800 dark:text-green-600  ease-in duration-300"
+            // onMouseEnter={() => handleMouseEnter("Contact")}
+            // onMouseLeave={handleMouseLeave}
+            className={`rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('contact')}`}
+
+            // className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 text-extrabold text-[#2EA1E5]   dark:text-[#49DBAF]  ease-in duration-300"
           >
             {/* <IoMailOutline size={25} /> */}
             {activeLink === 'Contact' ? 'Contact' :<IoMdMail size={25} />}

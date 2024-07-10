@@ -83,3 +83,7 @@ input:checked + .slider:before {
   text-decoration: underline  ;
  
 } */
+.section .selected {
+  background-color: #f0f0f0; /* Example background color */
+  /* Add other styles for selected state here */
+}
