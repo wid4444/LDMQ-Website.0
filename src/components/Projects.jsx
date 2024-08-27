@@ -15,6 +15,7 @@ import westend from "../assets/we-sire.png";
 import nbe from "../assets/inno-nbe.png";
 import waSire from "../assets/wa-sire.png";
 import danny from "../assets/danny.png";
+import mnt from "../assets/mnt.png";
 
 
 // import { FaVuejs, FaSass, FaSquarespace } from "react-icons/fa";
@@ -138,6 +139,36 @@ const Projects = () => {
 
       <p className="text-center py-8 dark:text-stone-300 text-3xl">Websites</p>
       <div className="grid sm:grid-cols-2 gap-5">
+      <ProjectItem 
+        img={mnt} 
+        title="M & T Contractors" 
+        link="https://www.mandt.contractors/landing-page"
+        skills={
+          <TechStack
+          SquareSpace={SquareSpace}
+          // Illustrator={Illustrator}
+          Canva={Canva}
+          />
+        }
+        description={
+          <Popup description="Developed a bilingual website for a contractor to attract more traffic in both Spanish and English, enhancing their online presence and expanding their customer reach."/>
+          }
+        />
+        <ProjectItem 
+        img={monica} 
+        title="Monica Lopez" 
+        link="https://monica-a-lopez.com/"
+        skills={
+          <TechStack
+          SquareSpace={SquareSpace}
+          Illustrator={Illustrator}
+          Canva={Canva}
+          />
+        }
+        description={
+          <Popup description="Designed and built an artist’s website using Squarespace to showcase her work, creating a professional online presence to effectively display her portfolio."/>
+          }
+        />
         <ProjectItem
           img={avi}
           title="Avi I.T."
@@ -172,21 +203,7 @@ const Projects = () => {
             <Popup description="This is my first portfolio website, where I highlight my skills and showcase the projects I've worked on"/>
             }
           />
-        <ProjectItem 
-        img={monica} 
-        title="Monica Lopez" 
-        link="https://monica-a-lopez.com/"
-        skills={
-          <TechStack
-          SquareSpace={SquareSpace}
-          Illustrator={Illustrator}
-          Canva={Canva}
-          />
-        }
-        description={
-          <Popup description="This is an artist’s website that I designed and built using Squarespace to help her showcase her work"/>
-          }
-        />
+        
         {/* <ProjectItem img={varImg} title="Var App" />
         <ProjectItem img={var2Img} title="Var Second App" /> */}
       </div>
