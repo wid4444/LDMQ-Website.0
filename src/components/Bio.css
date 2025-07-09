@@ -1,0 +1,61 @@
+/* Container with 3D effect background */
+.bio-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #f3f4f6, #d1d5db); /* Light gray gradient */
+    border-radius: 1.5rem;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1), 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Image wrapper */
+  .bio-image-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem;
+    width: 100%;
+  }
+  
+  /* Profile image with shadow and hover effect */
+  .bio-image {
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .bio-image:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Text content */
+  .bio-text {
+    padding: 0 1rem;
+    color: #1c1c1c;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Optional highlight span */
+  .highlight {
+    color: #4f46e5; /* Indigo */
+  }
+  
+  /* Dark mode (optional if you want to support it manually) */
+  @media (prefers-color-scheme: dark) {
+    .bio-container {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+    }
+  
+    .bio-text {
+      color: #d1fae5; /* emerald-50 equivalent */
+    }
+  
+    .highlight {
+      color: #14b8a6; /* teal-400 */
+    }
+  }

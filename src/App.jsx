@@ -123,7 +123,7 @@ function App() {
   <Particles options={options} init={particlesInit} loaded={particlesLoaded}/>
 </div>
 
-      <div className='bg-gray-300 dark:bg-sky-950'>
+      <div className='bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] border-[#FAEDCD] dark:from-[#4d194d] dark:to-[#006466] gap-20 flex flex-col items-center justify-center min-h-screen'>
          {/* <Sidenav currentSection={currentSection} /> */}
       <Main id="main" />
       <Bio id="bio" />

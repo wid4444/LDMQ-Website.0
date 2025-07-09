@@ -27,6 +27,9 @@ import { IoMdMail, IoIosCloseCircle } from "react-icons/io";
 // import { MdWorkOutline } from "react-icons/md";
 // import { AiOutlineAppstore } from "react-icons/ai";
 
+import Main from "./Main";
+import Toggle from './Toggle'
+
 import "./Styles.css";
 
 const Sidenav = () => {
@@ -167,8 +170,31 @@ const Sidenav = () => {
    return `section ${selectedSection === sectionId ? 'selected' : ''}`;
  };
 
+
+
+ const [darkMode, setDarkMode] = useState(() => {
+  const savedMode = localStorage.getItem('darkMode');
+  return savedMode === 'true' ? true : false;
+});
+
+useEffect(() => {
+  if (darkMode) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+  localStorage.setItem('darkMode', darkMode);
+}, [darkMode])
+
+const handleChange = () => {
+  setDarkMode(!darkMode)
+}
+
+
+
+
   return (
-    <div>
+    <div className=" border border-gray-300 dark:border-gray-600 relative">
       {/* fixed will keep the icon in a place Absolute will leave it at the top */}
       {/* <CgMenuHotdog  onClick={handleNav} className='fixed top-4 right-4 z-[99] md:hidden text-gray-800 dark:text-white font-bold' size={40}/>  */}
       {nav ? (
@@ -187,73 +213,137 @@ const Sidenav = () => {
 
       {/* This is saying if our Navbar is true to show the content other wise don't show  */}
       {nav ? (
-        <div className="fixed w-full h-screen bg-white/90 dark:bg-slate-800 flex flex-col justify-center items-center z-20">
-          <a
-            onClick={handleNav}
-            href="#main"
-            className="paths w-[35%] flex justify-center items-center rounded-full shadow-inner text-gray-100 bg-[#001b5e] dark:bg-green-600 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
-            <IoHome size={20} green-600 />
-            <span className="pl-4">Home</span>
-          </a>
-          <a
-            onClick={handleNav}
-            href="#bio"
-            className="paths w-[35%] flex justify-center items-center rounded-full shadow-inner text-gray-100 bg-[#001b5e] dark:bg-green-600 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
-            <FaUserTie size={20} />
-            <span className="pl-4">About Me</span>
-          </a>
-          <a
-            onClick={handleNav}
-            href="#experience"
-            className="paths w-[35%] flex justify-center items-center rounded-full shadow-inner text-gray-100 bg-[#001b5e] dark:bg-green-600 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
-            <BiSolidBriefcaseAlt2 size={20} />
-            <span className="pl-4">Experience</span>
-          </a>
-          <a
-            onClick={handleNav}
-            href="#projects"
-            className="paths w-[35%] flex justify-center items-center rounded-full shadow-inner text-gray-100 bg-[#001b5e] dark:bg-green-600 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
-            <IoApps size={20} />
-            <span className="pl-4">Projects</span>
-          </a>
-          {/* <a onClick={handleNav} href="#resume" className='paths w-[35%] flex justify-center items-center rounded-full shadow-inner text-gray-100 bg-[#001b5e] dark:bg-green-600 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
-                        <FaFileAlt size={20}/>
-                        <span className='pl-4'>Resume</span>
-                    </a> */}
-          <a
-            onClick={handleNav}
-            href="#contact"
-            className="paths w-[35%] flex justify-center items-center rounded-full shadow-inner text-gray-100 bg-[#001b5e] dark:bg-green-600 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
-            <IoMdMail size={20} />
-            <span className="pl-4">Contact</span>
-          </a>
-        </div>
+
+<div className="flex flex-col fixed bottom-0 left-0 h-32 w-full z-50 bg-white dark:bg-slate-900 border-t border-gray-300 dark:border-gray-700 md:hidden justify-around items-center px-2 py-1">
+
+
+<div className='fixed bottom-28 w-52 h-20 flex justify-center items-center  px-4 py-2 rounded-full bg-red-500 dark:bg-slate-900 border-b border-gray-300 dark:border-gray-700'>
+    <Toggle isChecked={darkMode} handleChange={handleChange} />
+  </div>
+  
+<div className="fixed bottom-11 left-0 w-full flex flex-row items-center justify-center gap-16 border border-green-500">
+  <a href="#bio" className={`p-3 ${getHighlightClass('bio')}`}>
+    <FaUserTie size={25} />
+  </a>
+
+  <a href="#experience" className={`p-3 ${getHighlightClass('experience')}`}>
+    <BiSolidBriefcaseAlt2 size={25} />
+  </a>
+  <a href="#projects" className={`p-3 ${getHighlightClass('projects')}`}>
+    <IoApps size={25} />
+  </a>
+
+  <a href="#contact" className={`p-3 ${getHighlightClass('contact')}`}>
+    <IoMdMail size={25} />
+  </a>
+  </div>
+</div>
+
+
+
+        // <div className="fixed w-full h-screen bg-white/90 dark:bg-slate-800 flex flex-col justify-center items-center z-20">
+        //   <a
+        //     onClick={handleNav}
+        //     href="#main"
+        //     className="paths w-[35%] flex justify-center items-center rounded-full shadow-inner text-gray-100 bg-[#001b5e] dark:bg-green-600 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+        //   >
+        //     <IoHome size={20} green-600 />
+        //     <span className="pl-4">Home</span>
+        //   </a>
+        //   <a
+        //     onClick={handleNav}
+        //     href="#bio"
+        //     className="paths w-[35%] flex justify-center items-center rounded-full shadow-inner text-gray-100 bg-[#001b5e] dark:bg-green-600 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+        //   >
+        //     <FaUserTie size={20} />
+        //     <span className="pl-4">About Me</span>
+        //   </a>
+        //   <a
+        //     onClick={handleNav}
+        //     href="#experience"
+        //     className="paths w-[35%] flex justify-center items-center rounded-full shadow-inner text-gray-100 bg-[#001b5e] dark:bg-green-600 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+        //   >
+        //     <BiSolidBriefcaseAlt2 size={20} />
+        //     <span className="pl-4">Experience</span>
+        //   </a>
+        //   <a
+        //     onClick={handleNav}
+        //     href="#projects"
+        //     className="paths w-[35%] flex justify-center items-center rounded-full shadow-inner text-gray-100 bg-[#001b5e] dark:bg-green-600 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+        //   >
+        //     <IoApps size={20} />
+        //     <span className="pl-4">Projects</span>
+        //   </a>
+         
+          // <a
+          //   onClick={handleNav}
+          //   href="#contact"
+          //   className="paths w-[35%] flex justify-center items-center rounded-full shadow-inner text-gray-100 bg-[#001b5e] dark:bg-green-600 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+          // >
+          //   <IoMdMail size={20} />
+          //   <span className="pl-4">Contact</span>
+          // </a>
+        // </div>
       ) : (
         ""
+
+// HERE STARTS SIDE MENU LOGIC ---------------------->>>>>>>
+
       )}
-      <div className="md:block hidden fixed top-[35%] z-10 ml-4 md:ml-0">
+      <div className="md:block hidden fixed h-screen z-10 ml-4 md:ml-10 border border-red-800 s">
+      
+  <Toggle 
+          isChecked={darkMode} 
+          // darkMode={darkMode} 
+          handleChange={handleChange}
+          />
+  
         <div className="flex flex-col">
-        <a
+
+        {/* <a
         href="#main"
         title="Home"
-        className={`rounded-2xl m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5]   dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('main')}`}
+        // className={`rounded-2xl m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5]   dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('main')}`}
+
+        className={`
+          inline-flex items-center justify-center w-14 h-14 rounded-full 
+             bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] dark:from-[#212f45] dark:to-[#006466]
+               
+             shadow-[-6px_6px_5px_rgba(0,0,0,0.5),1px_-1px_6px_rgba(255,255,255,1)]
+             hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_rgba(255,255,255,0.3)] 
+             dark:shadow-[-6px_6px_5px_rgba(0,0,0,0.5),1px_-1px_6px_#6ebcb1]
+                 dark:hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_#6ebcb1] 
+             hover:translate-y-[-2px] hover:scale-105 
+             transform transition-all duration-300 ease-in-out border border-[#FAEDCD] dark:border-[#144552]
+
+          m-2 p-4 cursor-pointer hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] icon-class ${getHighlightClass('main')}`}
+        
 
         // className={`rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('home')}`}
       >
         {activeLink === "#main" ? "Home" : <IoHome size={25}/>}
-      </a>
+      </a> */}
 
           <a
             href="#bio"
             title="Bio"
             // onMouseEnter={() => handleMouseEnter("Bio")}
             // onMouseLeave={handleMouseLeave}
-            className={`rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5]   dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('bio')}`}
+            // className={`rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5]   dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('bio')}`}
+
+            className={`
+              inline-flex items-center justify-center w-14 h-14 rounded-xl 
+                 bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] dark:from-[#212f45] dark:to-[#006466]
+                   
+                 shadow-[-6px_6px_5px_rgba(0,0,0,0.5),1px_-1px_6px_rgba(255,255,255,1)]
+                 hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_rgba(255,255,255,0.3)] 
+                 dark:shadow-[-6px_6px_5px_rgba(0,0,0,0.5),1px_-1px_6px_#6ebcb1]
+                     dark:hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_#6ebcb1] 
+                 hover:translate-y-[-2px] hover:scale-105 
+                 transform transition-all duration-300 ease-in-out border border-[#FAEDCD] dark:border-[#144552]
+    
+              m-5 p-4 cursor-pointer hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] icon-class ${getHighlightClass('bio')}`}
+
             // className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5]   dark:text-[#49DBAF] ease-in duration-300"
           >
             {/* <IoPersonOutline size={25} className="text-lg text-bold"/> */}
@@ -264,12 +354,25 @@ const Sidenav = () => {
             title="Experience"
             // onMouseEnter={() => handleMouseEnter("Experience")}
             // onMouseLeave={handleMouseLeave}
-            className={`rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5]   dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('experience')}`}
+            // className={`rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5]   dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('experience')}`}
+
+            className={`
+              inline-flex items-center justify-center w-14 h-14 rounded-xl 
+                 bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] dark:from-[#212f45] dark:to-[#006466]
+                   
+                 shadow-[-6px_6px_5px_rgba(0,0,0,0.5),1px_-1px_6px_rgba(255,255,255,1)]
+                 hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_rgba(255,255,255,0.3)] 
+                 dark:shadow-[-6px_6px_5px_rgba(0,0,0,0.5),1px_-1px_6px_#6ebcb1]
+                     dark:hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_#6ebcb1] 
+                 hover:translate-y-[-2px] hover:scale-105 
+                 transform transition-all duration-300 ease-in-out border border-[#FAEDCD] dark:border-[#144552]
+    
+              m-5 p-4 cursor-pointer hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] icon-class ${getHighlightClass('experience')}`}
 
             // className="rounded-full m-2 p-4 cursor-pointer hover:scale-110  text-[#ff6700]   dark:text-[#ff3cc7] ease-in duration-300"
           >
             {/* <MdWorkOutline size={25} /> */}
-            {activeLink === 'Experience' ? 'Experience' :<BiSolidBriefcaseAlt2 size={25} />}
+            {activeLink === 'Experience' ? 'Experience' :<BiSolidBriefcaseAlt2 size={35} />}
           </a>
           {/* <a
               href="#resume"
@@ -286,7 +389,20 @@ const Sidenav = () => {
             title="Projects"
             // onMouseEnter={() => handleMouseEnter("Projects")}
             // onMouseLeave={handleMouseLeave}
-            className={`rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('projects')}`}
+            // className={`rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('projects')}`}
+
+            className={`
+              inline-flex items-center justify-center w-14 h-14 rounded-xl 
+                 bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] dark:from-[#212f45] dark:to-[#006466]
+                   
+                 shadow-[-6px_6px_5px_rgba(0,0,0,0.5),1px_-1px_6px_rgba(255,255,255,1)]
+                 hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_rgba(255,255,255,0.3)] 
+                 dark:shadow-[-6px_6px_5px_rgba(0,0,0,0.5),1px_-1px_6px_#6ebcb1]
+                     dark:hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_#6ebcb1] 
+                 hover:translate-y-[-2px] hover:scale-105 
+                 transform transition-all duration-300 ease-in-out border border-[#FAEDCD] dark:border-[#144552]
+    
+              m-5 p-4 cursor-pointer hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] icon-class ${getHighlightClass('projects')}`}
 
             // className="rounded-full m-2 p-4 cursor-pointer hover:scale-110  text-[#2EA1E5]   dark:text-[#49DBAF]  ease-in duration-300"
           >
@@ -299,7 +415,20 @@ const Sidenav = () => {
             title="Contact"
             // onMouseEnter={() => handleMouseEnter("Contact")}
             // onMouseLeave={handleMouseLeave}
-            className={`rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('contact')}`}
+            // className={`rounded-full m-2 p-4 cursor-pointer hover:scale-110 hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] ease-in duration-300 icon-class ${getHighlightClass('contact')}`}
+
+            className={`
+              inline-flex items-center justify-center w-14 h-14 rounded-xl 
+                 bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] dark:from-[#212f45] dark:to-[#006466]
+                   
+                 shadow-[-6px_6px_5px_rgba(0,0,0,0.5),1px_-1px_6px_rgba(255,255,255,1)]
+                 hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_rgba(255,255,255,0.3)] 
+                 dark:shadow-[-6px_6px_5px_rgba(0,0,0,0.5),1px_-1px_6px_#6ebcb1]
+                     dark:hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_#6ebcb1] 
+                 hover:translate-y-[-2px] hover:scale-105 
+                 transform transition-all duration-300 ease-in-out border border-[#FAEDCD] dark:border-[#144552]
+    
+              m-5 p-4 cursor-pointer hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] icon-class ${getHighlightClass('contact')}`}
 
             // className="rounded-full m-2 p-4 cursor-pointer hover:scale-110 text-extrabold text-[#2EA1E5]   dark:text-[#49DBAF]  ease-in duration-300"
           >

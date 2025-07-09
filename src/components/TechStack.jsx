@@ -255,10 +255,27 @@ function LinkedIn() {
       {/* <FaLinkedin fontSize={30} color="lightblue" />
       <link rel="https://www.linkedin.com/in/leobardo-martinez/" href="linkedin" /> */}
 
-      <a href="https://www.linkedin.com/in/leobardo-martinez/" target="_blank" rel="noopener noreferrer">
+      {/* <a href="https://www.linkedin.com/in/leobardo-martinez/" target="_blank" rel="noopener noreferrer">
   <FaLinkedin  className="text-[#0077b5] dark:text-blue-400" size={40}/>
-      </a>
+      </a> */}
 
+<a
+  href="https://www.linkedin.com/in/leobardo-martinez/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center justify-center w-14 h-14 rounded-xl 
+             bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] dark:from-[#212f45] dark:to-[#006466]
+               
+             shadow-[-6px_6px_5px_rgba(0,0,0,0.5),1px_-1px_6px_rgba(255,255,255,1)]
+             hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_rgba(255,255,255,0.3)] 
+             dark:shadow-[-6px_6px_5px_rgba(0,0,0,0.5),1px_-1px_6px_#6ebcb1]
+                 dark:hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_#6ebcb1] 
+             hover:translate-y-[-2px] hover:scale-105 
+             transform transition-all duration-300 ease-in-out border border-[#FAEDCD] dark:border-[#144552]"
+>
+  <FaLinkedin size={40} 
+  className="text-[#0077b5] dark:text-blue-400"/>
+</a>
 
     </span>
   );
@@ -282,8 +299,20 @@ function GitHub() {
       // className='flex justify-center align-center shadow-inner  shadow-white rounded-full border-2 border-[#cc6699] p-2 mr-5'
     >
       {/* <FaGithub fontSize={30} color="violet" /> */}
-      <a href="https://github.com/wid4444" target="_blank" rel="noopener noreferrer">
-  <FaGithub  size={40} className="text-[#7b2cbf] dark:text-purple-400"/>
+      <a href="https://github.com/wid4444" 
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center w-14 h-14 rounded-xl 
+                 bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] dark:from-[#212f45] dark:to-[#006466]
+                 shadow-[-6px_6px_5px_rgba(0,0,0,0.5),1px_-1px_6px_rgba(255,255,255,1)]
+                 hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_rgba(255,255,255,0.3)] 
+                 dark:shadow-[-6px_6px_5px_rgba(0,0,0,0.5),1px_-1px_6px_#6ebcb1]
+                 dark:hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_#6ebcb1] 
+                 hover:translate-y-[-2px] hover:scale-105 
+                 transform transition-all duration-300 ease-in-out border border-[#FAEDCD] dark:border-[#144552]"
+    >
+  <FaGithub  size={40} 
+  className="text-[#7b2cbf] dark:text-purple-400"/>
 </a>
      
     </span>

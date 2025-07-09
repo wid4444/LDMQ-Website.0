@@ -1,8 +1,13 @@
 .toggle-container {
-  position: fixed;
-  top: -10px;
-  left: 10px;
+  position: relative;
+  flex: display;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* top: -10px; */
+  left: 15px;
   height: auto;
+  margin-bottom: 13rem;
 }
 .toggle {
   visibility: hidden;
@@ -141,16 +146,18 @@
 }
  @media screen and (max-width: 768px){
     .toggle-container {
+      /* position : fixed;
       top: 0px;
-      left: 10px;
+      left: 10px; */
     }
     
  }
  @media screen and (max-width: 450px){
   .toggle-container {
-    position: absolute;
-    top: 0px;
-    left: 10px;
+    position: relative;
+    padding-top: 11rem;
+    /* bottom: 50%; */
+    /* left: 0%; */
   }
   
 }
