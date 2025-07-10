@@ -69,7 +69,7 @@ const Work = () => {
     <div id='experience' 
     
     // className='max-w-[1040px] md:pl-20 m-auto p-4 py-16 z-100  bg-opacity-100'>
-      className='max-w-[1040px] m-auto p-20 py-16 md:mr-40 relative flex flex-col items-center justify-center h-auto w-full bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] border border-[#FAEDCD] dark:border-[#144552] dark:from-[#4d194d] dark:to-[#006466] rounded-3xl shadow-[inset_0_0_30px_rgba(0,0,0,0.1),0_10px_30px_rgba(0,0,0,0.3)]'
+      className='max-w-[1040px] m-auto 2xl:mr-40 xl:mr-20 p-20 py-16 relative flex flex-col items-center justify-center h-auto w-full bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] border border-[#FAEDCD] dark:border-[#144552] dark:from-[#4d194d] dark:to-[#006466] rounded-3xl shadow-[inset_0_0_30px_rgba(0,0,0,0.1),0_10px_30px_rgba(0,0,0,0.3)]'
        >
       
         <h1 className='text-4xl font-bold text-center text-[#001b5e] dark:text-gray-300 p-10 pb-20' >Experience</h1>

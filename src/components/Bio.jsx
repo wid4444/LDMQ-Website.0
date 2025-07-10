@@ -28,7 +28,7 @@ function Bio() {
   return (
     <div
       id='bio'
-      className='max-w-[1040px] m-auto md:mr-40 p-20 py-16 mt-20 relative flex flex-col items-center justify-center h-auto w-full bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] border border-[#FAEDCD] dark:border-[#144552] dark:from-[#4d194d] dark:to-[#006466] rounded-3xl shadow-[inset_0_0_30px_rgba(0,0,0,0.1),0_10px_30px_rgba(0,0,0,0.3)]'
+      className='max-w-[1040px] m-auto 2xl:mr-40 xl:mr-20 p-20 py-16 mt-20 relative flex flex-col items-center justify-center h-auto w-full bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] border border-[#FAEDCD] dark:border-[#144552] dark:from-[#4d194d] dark:to-[#006466] rounded-3xl shadow-[inset_0_0_30px_rgba(0,0,0,0.1),0_10px_30px_rgba(0,0,0,0.3)]'
     >
       <div className='flex justify-center h-auto w-full p-10'>
         <img

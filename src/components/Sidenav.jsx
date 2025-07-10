@@ -200,13 +200,13 @@ const handleChange = () => {
       {nav ? (
         <IoIosCloseCircle
           onClick={handleNav}
-          className="absolute top-4 right-4 z-[99] md:hidden text-gray-700 dark:text-white font-bold"
+          className="absolute top-4 right-4 z-[99] xl:hidden text-gray-700 dark:text-white font-bold"
           size={40}
         />
       ) : (
         <IoMenu
           onClick={handleNav}
-          className="absolute top-4 right-4 z-[99] md:hidden text-gray-800 dark:text-white font-bold"
+          className="absolute top-4 right-4 z-[99] xl:hidden text-gray-800 dark:text-white font-bold"
           size={45}
         />
       )}
@@ -214,29 +214,73 @@ const handleChange = () => {
       {/* This is saying if our Navbar is true to show the content other wise don't show  */}
       {nav ? (
 
-<div className="flex flex-col fixed bottom-0 left-0 h-32 w-full z-50 bg-white dark:bg-slate-900 border-t border-gray-300 dark:border-gray-700 md:hidden justify-around items-center px-2 py-1">
 
+<div className="flex flex-col fixed bottom-0 left-0 h-32 w-full z-50 bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] dark:from-[#212f45] dark:to-[#006466] border-t border-gray-300 dark:border-gray-700 justify-around items-center px-2 py-1 xl:hidden">
 
-<div className='fixed bottom-28 w-52 h-20 flex justify-center items-center  px-4 py-2 rounded-full bg-red-500 dark:bg-slate-900 border-b border-gray-300 dark:border-gray-700'>
+<div className='fixed bottom-24 w-22 h-16 flex justify-center items-center  px-4 py-2 rounded-full
+                bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] dark:from-[#212f45] dark:to-[#006466]
+                 shadow-[-1px_6px_5px_rgba(0,0,0,0.5),1px_-1px_7px_rgba(255,255,255,1)]
+                 hover:shadow-[-1px_8px_12px_rgba(0,0,0,0.5),1px_-3px_6px_rgba(255,255,255,0.3)] 
+                 dark:shadow-[-1px_6px_5px_rgba(0,0,0,0.5),1px_-1px_7px_#6ebcb1]
+                 dark:hover:shadow-[-1px_8px_12px_rgba(0,0,0,0.5),1px_-3px_6px_#6ebcb1] 
+                 hover:translate-y-[-2px] hover:scale-105 
+                 transform transition-all duration-300 ease-in-out border border-[#FAEDCD] dark:border-[#144552]'>
     <Toggle isChecked={darkMode} handleChange={handleChange} />
   </div>
+
+
   
-<div className="fixed bottom-11 left-0 w-full flex flex-row items-center justify-center gap-16 border border-green-500">
-  <a href="#bio" className={`p-3 ${getHighlightClass('bio')}`}>
+<div className="fixed bottom-12 left-0 w-full flex flex-row items-center justify-center gap-8">
+
+  <a href="#bio" className={`inline-flex items-center justify-center w-10 h-10 rounded-xl 
+                 bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] dark:from-[#212f45] dark:to-[#006466]
+                 shadow-[-1px_6px_5px_rgba(0,0,0,0.5),1px_-1px_7px_rgba(255,255,255,1)]
+                 hover:shadow-[-1px_8px_12px_rgba(0,0,0,0.5),1px_-3px_6px_rgba(255,255,255,0.3)] 
+                 dark:shadow-[-1px_6px_5px_rgba(0,0,0,0.5),1px_-1px_7px_#6ebcb1]
+                 dark:hover:shadow-[-1px_8px_12px_rgba(0,0,0,0.5),1px_-3px_6px_#6ebcb1] 
+                 hover:translate-y-[-2px] hover:scale-105 
+                 transform transition-all duration-300 ease-in-out border border-[#FAEDCD] dark:border-[#144552]
+                 cursor-pointer hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] icon-class ${getHighlightClass('bio')}`}>
     <FaUserTie size={25} />
   </a>
 
-  <a href="#experience" className={`p-3 ${getHighlightClass('experience')}`}>
+  <a href="#experience" className={`inline-flex items-center justify-center w-10 h-10 rounded-xl 
+                 bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] dark:from-[#212f45] dark:to-[#006466]
+                 shadow-[-1px_6px_5px_rgba(0,0,0,0.5),1px_-1px_7px_rgba(255,255,255,1)]
+                 hover:shadow-[-1px_8px_12px_rgba(0,0,0,0.5),1px_-3px_6px_rgba(255,255,255,0.3)] 
+                 dark:shadow-[-1px_6px_5px_rgba(0,0,0,0.5),1px_-1px_7px_#6ebcb1]
+                 dark:hover:shadow-[-1px_8px_12px_rgba(0,0,0,0.5),1px_-3px_6px_#6ebcb1] 
+                 hover:translate-y-[-2px] hover:scale-105 
+                 transform transition-all duration-300 ease-in-out border border-[#FAEDCD] dark:border-[#144552] mr-24
+                 cursor-pointer hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] icon-class ${getHighlightClass('experience')}`}>
     <BiSolidBriefcaseAlt2 size={25} />
   </a>
-  <a href="#projects" className={`p-3 ${getHighlightClass('projects')}`}>
+  <a href="#projects" className={`inline-flex items-center justify-center w-10 h-10 rounded-xl 
+                 bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] dark:from-[#212f45] dark:to-[#006466]
+                 shadow-[-1px_6px_5px_rgba(0,0,0,0.5),1px_-1px_7px_rgba(255,255,255,1)]
+                 hover:shadow-[-1px_8px_12px_rgba(0,0,0,0.5),1px_-3px_6px_rgba(255,255,255,0.3)] 
+                 dark:shadow-[-1px_6px_5px_rgba(0,0,0,0.5),1px_-1px_7px_#6ebcb1]
+                 dark:hover:shadow-[-1px_8px_12px_rgba(0,0,0,0.5),1px_-3px_6px_#6ebcb1] 
+                 hover:translate-y-[-2px] hover:scale-105 
+                 transform transition-all duration-300 ease-in-out border border-[#FAEDCD] dark:border-[#144552]
+                 cursor-pointer hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] icon-class ${getHighlightClass('projects')}`}>
     <IoApps size={25} />
   </a>
 
-  <a href="#contact" className={`p-3 ${getHighlightClass('contact')}`}>
+  <a href="#contact" className={`inline-flex items-center justify-center w-10 h-10 rounded-xl 
+                 bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] dark:from-[#212f45] dark:to-[#006466]
+                 shadow-[-1px_6px_5px_rgba(0,0,0,0.5),1px_-1px_7px_rgba(255,255,255,1)]
+                 hover:shadow-[-1px_8px_12px_rgba(0,0,0,0.5),1px_-3px_6px_rgba(255,255,255,0.3)] 
+                 dark:shadow-[-1px_6px_5px_rgba(0,0,0,0.5),1px_-1px_7px_#6ebcb1]
+                 dark:hover:shadow-[-1px_8px_12px_rgba(0,0,0,0.5),1px_-3px_6px_#6ebcb1]  
+                 hover:translate-y-[-2px] hover:scale-105 
+                 transform transition-all duration-300 ease-in-out border border-[#FAEDCD] dark:border-[#144552]
+                 cursor-pointer hover:text-extrabold text-[#2EA1E5] dark:text-[#49DBAF] icon-class ${getHighlightClass('contact')}`}>
     <IoMdMail size={25} />
   </a>
+
   </div>
+
 </div>
 
 
@@ -290,7 +334,7 @@ const handleChange = () => {
 // HERE STARTS SIDE MENU LOGIC ---------------------->>>>>>>
 
       )}
-      <div className="md:block hidden fixed h-screen z-10 ml-4 md:ml-10 border border-red-800 s">
+      <div className="xl:block hidden fixed h-screen z-10 ml-4 md:ml-10 border border-red-800 s">
       
   <Toggle 
           isChecked={darkMode} 
@@ -420,11 +464,10 @@ const handleChange = () => {
             className={`
               inline-flex items-center justify-center w-14 h-14 rounded-xl 
                  bg-gradient-to-tr from-[#D4A373] to-[#FEFAE0] dark:from-[#212f45] dark:to-[#006466]
-                   
                  shadow-[-6px_6px_5px_rgba(0,0,0,0.5),1px_-1px_6px_rgba(255,255,255,1)]
                  hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_rgba(255,255,255,0.3)] 
                  dark:shadow-[-6px_6px_5px_rgba(0,0,0,0.5),1px_-1px_6px_#6ebcb1]
-                     dark:hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_#6ebcb1] 
+                 dark:hover:shadow-[-8px_8px_12px_rgba(0,0,0,0.5),3px_-3px_6px_#6ebcb1] 
                  hover:translate-y-[-2px] hover:scale-105 
                  transform transition-all duration-300 ease-in-out border border-[#FAEDCD] dark:border-[#144552]
     
