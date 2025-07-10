@@ -1,10 +1,6 @@
 .toggle-container {
   position: relative;
   flex: display;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* top: -10px; */
   left: 15px;
   height: auto;
   margin-bottom: 13rem;
@@ -21,10 +17,8 @@
 }
 .toggle + label:before {
   content: "☀️\00a0\00a0\00a0\🌙";
-  /* content: ''; */
   display: flex;
   font-size: 12px;
-
   align-items: center;
   justify-content: center;
   height: 34px;
@@ -34,7 +28,7 @@
   border-radius: 20px;
   background-color: blueviolet;
   -webkit-box-shadow: inset 0px 5px 10px 0px #16151c, 0px 3px 6px -2px #403f4e;
-  box-shadow: inset 0px 5px 10px 0px #16151c, 0px 3px 6px -2px #403f4e;
+  box-shadow: inset 0px 4px 10px 0px #16151c, -2px 2px 7px 2px #403f4e;
   border: 1px solid #32303e;
 
   transition: background-color 250ms ease-in-out;
@@ -42,14 +36,10 @@
 .toggle:checked + label:before {
   background-color: deepskyblue;
   border: 1px solid lightblue;
-  /* -webkit-box-shadow: inset 0px 5px 10px 0px #16151c, 0px 3px 6px -2px #403f4e;
-    box-shadow: inset 0px 5px 10px 0px #16151c, 0px 3px 6px -2px #403f4e;
-    border: 1px solid #32303e; */
 }
 
 .toggle + label:after {
   position: absolute;
-  /* content: url('../assets/light-mode-fill.svg'); */
   content: "☀️";
   display: flex;
   align-items: center;
@@ -58,28 +48,9 @@
   height: 25px;
   width: 25px;
   padding-top: 2px;
-  /* padding-left: 0; */
   font-size: 12px;
   border-radius: 20px;
   left: 5px;
-
-  /* transition: background-color 250ms ease-in-out, transform 250ms ease-in-out; */
-  /* background-color: violet; */
-
-  /* background: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(#add8e6),
-        to(#87cefa)
-      );
-    background: -o-linear-gradient(#add8e6, #87cefa);
-    background: linear-gradient(#add8e6, #87cefa);
-    -webkit-box-shadow: inset 0px 5px 4px 0px #b0c4de, 0px 4px 15px 0px #87ceeb;
-    box-shadow: inset 0px 5px 4px 0px #b0c4de, 0px 4px 15px 0px #87ceeb;
-    -webkit-transition: left 0.4s ease-in-out;
-    -o-transition: left 0.4s ease-in-out;
-    transition: left 0.4s ease-in-out, transform 0.4s ease-in-out; */
   border: 1px solid deepskyblue;
 
   background: -webkit-gradient(
@@ -99,11 +70,8 @@
 }
 
 .toggle:checked + label::after {
-  /* content: url('../assets/dark-mode-fill.svg'); */
   content: "🌙";
-  /* padding-left: 2px; */
   font-size: 10px;
-  /* padding-right:5px; */
   padding-bottom: 1px;
   fill: white;
   display: flex;
@@ -111,10 +79,7 @@
   justify-content: center;
   text-align: center;
   transform: translateX(100%);
-  /* background-color: darkviolet; */
   border: 1px solid rgb(173, 4, 245);
-  /* box-shadow: 0px 4px 8px 0px darkviolet; */
-
   background: -webkit-gradient(
     linear,
     left top,
@@ -125,7 +90,7 @@
   background: -o-linear-gradient(#3b3a4e, #272733);
   background: linear-gradient(#3b3a4e, #272733);
   -webkit-box-shadow: inset 0px 5px 4px 0px #424151, 0px 4px 15px 0px #0f0e17;
-  box-shadow: inset 0px 5px 4px 0px #424151, 0px 0px 10px 2px darkviolet;
+  box-shadow: inset 0px 5px 4px 0px #424151, 0px 0px 5px 2px darkviolet;
   -webkit-transition: left 0.4s ease-in-out;
   -o-transition: left 0.4s ease-in-out;
   transition: left 0.4s ease-in-out, transform 0.4s ease-in-out;

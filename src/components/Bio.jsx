@@ -49,19 +49,19 @@ function Bio() {
 
       
       <div className='px-4'>
-        <p className='my-4 2xl:text-xl xsm:text-md font-bold text-[#365438] dark:text-emerald-50 drop-shadow-[2px_2px_2px_#92aa68]'>
+        <p className='my-4 2xl:text-xl xsm:text-md text-[#365438] dark:text-emerald-50 drop-shadow-[2px_2px_2px_#92aa68]'>
           Hi there! I'm <span className="text-indigo-600 dark:text-teal-400">Leobardo</span>, although most folks know me as Danny.
         </p>
-        <p className='my-4 2xl:text-xl xsm:text-md font-bold text-stone-800 dark:text-emerald-50 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.2)]'>
+        <p className='my-4 2xl:text-xl xsm:text-md  text-stone-800 dark:text-emerald-50 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.2)]'>
           Back in 2022, I made the exciting decision to dive into the world of coding and web development through Tech Elevator. Since then, I’ve had the incredible opportunity to craft software solutions for diverse clients.
         </p>
-        <p className='my-4 2xl:text-xl xsm:text-md font-bold text-stone-800 dark:text-emerald-50 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.2)]'>
+        <p className='my-4 2xl:text-xl xsm:text-md text-stone-800 dark:text-emerald-50 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.2)]'>
           These days, I focus on creating user-friendly interfaces at Tech Impact, combining beautiful design with solid performance behind the scenes.
         </p>
-        <p className='my-4 2xl:text-xl xsm:text-md font-bold text-stone-800 dark:text-emerald-50 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.2)]'>
+        <p className='my-4 2xl:text-xl xsm:text-md text-stone-800 dark:text-emerald-50 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.2)]'>
           My stack includes React.js, Vue.js, Spring Boot, Figma, Adobe XD, Java, HTML/CSS/JS, Bootstrap, Tailwind, Mapbox, and Recharts.
         </p>
-        <p className='my-4 2xl:text-xl xsm:text-md font-bold text-stone-800 dark:text-emerald-50 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.2)]'>
+        <p className='my-4 2xl:text-xl xsm:text-md text-stone-800 dark:text-emerald-50 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.2)]'>
           Outside of work, I love woodworking, spending time with my wife and Lilly, doing house projects, or watching anime.
         </p>
       </div>
