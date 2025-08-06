@@ -199,7 +199,7 @@ const handleChange = () => {
       {/* <CgMenuHotdog  onClick={handleNav} className='fixed top-4 right-4 z-[99] md:hidden text-gray-800 dark:text-white font-bold' size={40}/>  */}
 
       
-      {/* {nav ? (
+      {nav ? (
         <IoIosCloseCircle
           onClick={handleNav}
           className="absolute top-4 right-4 z-[99] xl:hidden text-gray-700 dark:text-white font-bold"
@@ -211,7 +211,7 @@ const handleChange = () => {
           className="absolute top-4 right-4 z-[99] xl:hidden text-gray-800 dark:text-white font-bold"
           size={45}
         />
-      )} */}
+      )}
 
       {/* This is saying if our Navbar is true to show the content other wise don't show  */}
       {nav ? (
